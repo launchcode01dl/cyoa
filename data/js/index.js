@@ -19,6 +19,6 @@ $('.btn').click(function(){
     document.getElementById('myIframe').src = "data/" + value + ".html";
   }
   function githubSite() {   
-    var target= "https://github.com/launchcode01dl/interactive-cyoas-withpointcheat";
+    var target= "https://github.com/launchcode01dl/cyoa";
     window.open(target, '_blank')
   }
