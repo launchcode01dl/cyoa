@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang=en>
+
+<head>
+    <meta charset=utf-8>
+    <meta http-equiv=X-UA-Compatible content="IE=edge">
+    <meta name=viewport content="width=device-width,initial-scale=1">
+    <link rel=stylesheet href=https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css
+        integrity=sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm crossorigin=anonymous>
+    <script src=https://unpkg.com/vue-select@latest></script>
+    <link rel=stylesheet href=https://unpkg.com/vue-select@latest/dist/vue-select.css>
+    <title>CYOA</title>
+    <link rel=stylesheet href="https://fonts.googleapis.com/css?family=Roboto:100,300,400,500,700,900">
+    <link rel=stylesheet href=https://cdn.jsdelivr.net/npm/@mdi/font@latest/css/materialdesignicons.min.css>
+    <link href=css/app.df7ca14c.css rel=preload as=style>
+    <link href=css/chunk-vendors.58637379.css rel=preload as=style>
+    <link href=js/app.c533aa25.js rel=preload as=script>
+    <link href=js/chunk-vendors.59af3576.js rel=preload as=script>
+    <link href=css/chunk-vendors.58637379.css rel=stylesheet>
+    <link href=css/app.df7ca14c.css rel=stylesheet>
+
+</head>
+
+<body><noscript><strong>We're sorry but the CYOA doesn't work properly without JavaScript enabled.
+            Please enable it to continue.</strong></noscript>
+    <div id="indicator" style="width:100%; margin-top: 5%; justify-content: center; align-items: center; display: none">
+        <div style="color:black;border: .1em solid #A4174E;border-radius: .5em;">
+            <p style="font-weight: normal;font-size: 150%;text-align:center;margin-bottom:-.05em"><span id="percentage_bar"></span>
+                <span id="mb_bar" style="font-weight: lighter;font-size: 50%;margin-right:.5em"></span>
+            </p>
+            <div id="loadbar" style="width:0%;background-color:#A4174E;padding:.5em;font-weight: normal;font-size: 150%;border-radius: 0 0 .1em .1em;"> </div>
+            
+        </div>
+        <script>
+            var jsonfile = "jsons/goodworldmysticmartialarts.json";
+            {let _XHR = XMLHttpRequest; var filesize = 3.6*(1024**2); XMLHttpRequest = class XHR extends _XHR 
+                {constructor () { super(); this.addEventListener('progress', e => 
+                {percentage_bar.innerText = " Loading: " + (`${(100 * e.loaded / (e.total||filesize)).toFixed(2)}%`)+"  ",
+                 mb_bar.innerText = `${(e.loaded/1024**2).toFixed(1)} MB`, loadbar.style.width = `${(100 * e.loaded / (e.total||filesize)).toFixed(2)}%`,indicator.style.display = "flex"});
+                this.addEventListener('loadend', () => {indicator.style.display= "none"});
+            }}}
+        </script>
+    </div>       
+    <div id=app></div>
+    <script src=js/chunk-vendors.59af3576.js></script>
+    <script src=js/app.c533aa25.js></script>
+</body>
+
+</html>
