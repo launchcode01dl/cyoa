@@ -721,7 +721,7 @@
                     "scores": [
                         {
                             "id": "bw",
-                            "value": "-1000000",
+                            "value": "-100",
                             "type": "",
                             "requireds": [],
                             "beforeText": "",
@@ -731,7 +731,7 @@
                         },
                         {
                             "id": "wi",
-                            "value": "-1000000",
+                            "value": "-24",
                             "type": "",
                             "requireds": [],
                             "beforeText": "",
