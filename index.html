@@ -21,7 +21,7 @@
           </a>
           <ul class="item-show-1">
             <li>
-              <a href="#" value="custom/brigadewormV6/index" onclick="newSite(this.getAttribute('value'))">Worm V6</a>
+              <a href="#" value="custom/brigadewormV6/index" onclick="customSite(this.getAttribute('value'))">Worm V6</a>
             </li>
           </ul>
         </li>
@@ -30,10 +30,10 @@
           </a>
           <ul class="item-show-2">
             <li>
-              <a href="#" value="custom/glyphwormV6/index" onclick="newSite(this.getAttribute('value'))">Worm V6</a>
+              <a href="#" value="custom/glyphwormV6/index" onclick="customSite(this.getAttribute('value'))">Worm V6</a>
             </li>
             <li>
-              <a href="#" value="glyphmha" onclick="newSite(this.getAttribute('value'))">MHA</a>
+              <a href="#" name="glyphmha" size="1.1" onclick="commonSite(this.getAttribute('name'),this.getAttribute('size'))">MHA</a>
             </li>
           </ul>
         </li>
@@ -42,7 +42,7 @@
           </a>
           <ul class="item-show-3">
             <li>
-              <a href="#" value="goodworldmysticmartialarts" onclick="newSite(this.getAttribute('value'))">Mystic Martial Arts</a>
+              <a href="#" name="goodworldmysticmartialarts" size="3.6" onclick="commonSite(this.getAttribute('name'),this.getAttribute('size'))">Mystic Martial Arts</a>
             </li>
           </ul>
         </li>
@@ -51,10 +51,10 @@
           </a>
           <ul class="item-show-4">
             <li>
-              <a href="#" value="infaeraharrypotter" onclick="newSite(this.getAttribute('value'))">Harry Potter</a>
+              <a href="#" name="infaeraharrypotter" onclick="commonSite(this.getAttribute('name'),this.getAttribute('size'))">Harry Potter</a>
             </li>
             <li>
-              <a href="#" value="infaeraopisekai" onclick="newSite(this.getAttribute('value'))">Overpowered Isekai</a>
+              <a href="#" name="infaeraopisekai" onclick="commonSite(this.getAttribute('name'),this.getAttribute('size'))">Overpowered Isekai</a>
             </li>
           </ul>
         </li>
@@ -63,7 +63,7 @@
           </a>
           <ul class="item-show-5">
             <li>
-              <a href="#" value="kondorhp" onclick="newSite(this.getAttribute('value'))">Harry Potter</a>
+              <a href="#" name="kondorhp" onclick="commonSite(this.getAttribute('name'),this.getAttribute('size'))">Harry Potter</a>
             </li>
           </ul>
         </li>
@@ -72,7 +72,7 @@
           </a>
           <ul class="item-show-6">
             <li>
-              <a href="#" value="lennkazjedi" onclick="newSite(this.getAttribute('value'))">Jedi</a>
+              <a href="#" name="lennkazjedi" onclick="commonSite(this.getAttribute('name'),this.getAttribute('size'))">Jedi</a>
             </li>
           </ul>
         </li>
@@ -81,46 +81,64 @@
           </a>
           <ul class="item-show-7">
             <li>
-              <a href="#" value="ltouroumovwormv6" onclick="newSite(this.getAttribute('value'))">Worm V6</a>
+              <a href="#" name="ltouroumovwormv6" onclick="commonSite(this.getAttribute('name'),this.getAttribute('size'))">Worm V6</a>
             </li>
           </ul>
         </li>
         <li>
-          <a href="#" id="8">Pasadena's CYOAs <span class="fas fa-caret-down"></span>
+          <a href="#" id="8">MythicLegendary's CYOAs <span class="fas fa-caret-down"></span>
           </a>
           <ul class="item-show-8">
             <li>
-              <a href="#" value="pasadenalg" onclick="newSite(this.getAttribute('value'))">Living God</a>
-            </li>
-            <li>
-              <a href="#" value="pasadenawormv3" onclick="newSite(this.getAttribute('value'))">Worm V3</a>
+              <a href="#" name="mythiclegendarypcxenon" onclick="commonSite(this.getAttribute('name'),this.getAttribute('size'))">Power Creator Xenon</a>
             </li>
           </ul>
         </li>
         <li>
-          <a href="#" id="9">Punch's CYOAs <span class="fas fa-caret-down"></span>
+          <a href="#" id="9">PixelGMS's CYOAs <span class="fas fa-caret-down"></span>
           </a>
           <ul class="item-show-9">
             <li>
-              <a href="#" value="punchgamer" onclick="newSite(this.getAttribute('value'))">Interactive Gamer</a>
-            </li>
-            <li>
-              <a href="#" value="punchnaruto" onclick="newSite(this.getAttribute('value'))">Naruto</a>
+              <a href="#" name="ltouroumovwormv6" onclick="commonSite(this.getAttribute('name'),this.getAttribute('size'))">Worm V6</a>
             </li>
           </ul>
         </li>
         <li>
-          <a href="#" id="10">Serenity's CYOAs <span class="fas fa-caret-down"></span>
+          <a href="#" id="10">Pasadena's CYOAs <span class="fas fa-caret-down"></span>
           </a>
           <ul class="item-show-10">
             <li>
-              <a href="#" value="serenityhp" onclick="newSite(this.getAttribute('value'))">Harry Potter</a>
+              <a href="#" name="pasadenalg" onclick="commonSite(this.getAttribute('name'),this.getAttribute('size'))">Living God</a>
+            </li>
+            <li>
+              <a href="#" name="pasadenawormv3" onclick="commonSite(this.getAttribute('name'),this.getAttribute('size'))">Worm V3</a>
+            </li>
+          </ul>
+        </li>
+        <li>
+          <a href="#" id="11">Punch's CYOAs <span class="fas fa-caret-down"></span>
+          </a>
+          <ul class="item-show-11">
+            <li>
+              <a href="#" name="punchgamer" onclick="commonSite(this.getAttribute('name'),this.getAttribute('size'))">Interactive Gamer</a>
+            </li>
+            <li>
+              <a href="#" name="punchnaruto" onclick="commonSite(this.getAttribute('name'),this.getAttribute('size'))">Naruto</a>
+            </li>
+          </ul>
+        </li>
+        <li>
+          <a href="#" id="12">Serenity's CYOAs <span class="fas fa-caret-down"></span>
+          </a>
+          <ul class="item-show-12">
+            <li>
+              <a href="#" name="serenityhp" onclick="commonSite(this.getAttribute('name'),this.getAttribute('size'))">Harry Potter</a>
             </li>
           </ul>
         </li>
       </ul>
     </nav>
-    <iframe id="myIframe" src="data/enter.html" frameborder="0" allowfullscreen style="position:absolute;top:0;left:0;width:100%;height:100%;"></iframe>
+    <iframe id="myIframe" name="" size="" src="data/enter.html" frameborder="0" allowfullscreen style="position:absolute;top:0;left:0;width:100%;height:100%;"></iframe>
     <script src="data/js/index.js"></script>
   </body>
 </html>
