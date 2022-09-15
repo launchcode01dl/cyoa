@@ -1,0 +1,458 @@
+body {
+	font-size: 100%;
+	background-image: url("https://luminarium.neocities.org/Magicite2.png"), url("Scrollbacking3.png"), url("Woodgrain2.png"); /* url("Sheetshadow.png") */
+	background-position: center top, center top, left top;
+	background-attachment: fixed, scroll, fixed;
+    background-repeat: no-repeat, repeat-y, no-repeat;
+	background-size: 65px 90px, 900px 900px, 100% 100%;
+}
+
+h1 {
+	text-align: center;
+	font-style: italic;
+	font-size: 1.6em;
+	font-family: Palatino, serif;
+	cursor: pointer; cursor: hand;
+}
+h1:hover {
+	color: #8C6441; /* medium gray: 8F8F8F */
+}
+
+h2 {
+	/* text-align: center; */
+	/* font-style: italic; */
+	font-size: 1.2em;
+	font-family: Fontin, serif;
+	cursor: pointer; cursor: hand;
+	display: block;
+	width: 800px;
+	margin: auto;
+}
+
+table {
+	margin-left: auto;
+	margin-right: auto;
+	border-collapse: collapse;
+	table-layout: fixed;
+	max-width: 800px;
+	min-width: 800px;
+}
+
+tr {
+	border-bottom: 1px solid #CCA876; /* light gray: CCCCCC*/
+	border-top: 1px solid #CCA876;
+	border-collapse: collapse;
+	background-color: #F6F6F600;
+	/* background-color: rgba(255,255,255,0); */
+	color: #000000; /* dark gray: 666666; mid gray: ABABAB */
+}
+
+tr:hover {
+	/* background-color: #BF9C6D33; gold: FCEA83; pastel gold: FCF0A9; very light beige: FCF6CF; very light gray: E8E8E8 */
+	background-color: rgba(209,154,98,0.3); /* D19A62 */
+	color: #663409; /* deep burnt umber: 4A2D00; 5C3902; burnt umber: 785200  8C6441*/
+}
+
+.purchased {
+	/* background-color: #FCD68377; original green: 99dd55 ; gold: FCEA83 ; pastel blue: B3DCF2 ; light blue: 8DCBE3; tin blue: B7CCED; light tin blue: C7D6F0; lighter: D3DEF2   */
+	background-color: rgba(252,214,131,0.5);
+	color: #804B06; /* navy blue: 20486B ; 805306 */
+}
+tr.purchased:hover {
+	/* background-color: #FCE49D99; light blue: ABCEFF; very light tin blue: E6ECF7 */
+	background-color: rgba(230,186,115,0.65); /* E6BA73 */
+	color: #854D00; /* dark navy blue: 082742; dark tin blue: 6B92B5; dark royal blue: 3271A8 */
+}
+
+td {
+    vertical-align: top;
+}
+
+hr {
+	clear: both;
+	border-color: #8C6441;
+	background-color: #8C6441;
+	color: #8C6441;
+	max-width: 800px;
+}
+
+#stones_top { position: fixed; top: 2px; left: 0; right: 0; border: none; z-index: 3; }
+#stones_center { width: 155px; margin: auto;  }
+
+#bluegem_top { position: fixed; top: 10px; left: 0; right: 0; border: none; z-index: 4; }
+#bluegem_posshift { text-align: left; width: 58px; margin: auto; }
+#bluegem_center { text-align: center; width: 50px; }
+
+#coins_top { position: fixed; top: 0px; left: 0; right: 0; border: none; z-index: 2; }
+
+#smallstones_posshift { text-align: left; width: 56px; margin: auto; }
+
+.currencydisp_frame { width:452px; height:200px; margin: auto; }
+.currencydisp_child { width:150px; text-align: center; float:left; }
+.currencydisp_narration {
+	font-family: Times New Roman;
+	font-weight: bold;
+	color: #634122;
+}
+
+.noselect {
+  -webkit-touch-callout: none; /* iOS Safari */
+  -webkit-user-select: none;   /* Chrome/Safari/Opera */
+  -khtml-user-select: none;    /* Konqueror */
+  -moz-user-select: none;      /* Firefox */
+  -ms-user-select: none;       /* IE/Edge */
+  user-select: none;           /* non-prefixed version, currently
+                                  not supported by any browser */
+}
+
+.tradestones_frame { width:400px; height:72px; margin: auto; }
+.tradestones_disp { width:100px; text-align: center; float:left; 
+	font-family: Times New Roman;
+ }
+ .tradestones_dispprice { text-align: center; 
+	font-weight: bold;
+	color: #BA8900; /* 634122 */
+	font-size: 2em;
+ }
+  .tradestones_disppricetag { text-align: center; 
+	font-style: italic;
+	color: #000000;
+ }
+.tradestones_buy { width:148px; text-align: center; float:left; 
+	font-weight: bold;
+	background-color: rgba(194,152,95,0.14);
+	border:1px solid #CCA876;
+	cursor: pointer; cursor: hand;
+ }
+ .tradestones_sell { width:148px; text-align: center; float:left; 
+	font-weight: bold;
+	background-color: rgba(230,147,147,0.14);
+	border:1px solid #E09D99;
+	cursor: pointer; cursor: hand;
+ }
+
+.tradestones_buy:hover {
+	background-color: rgba(252,214,131,0.3);
+	color: #634122;
+}
+.tradestones_sell:hover {
+	background-color: rgba(255,157,150,0.3); 
+	color: #941709;
+}
+
+.tradestones_buy:active {
+	background-color: rgba(230,186,115,0.5);
+	color: #634122;
+}
+.tradestones_sell:active {
+	background-color: rgba(255,157,150,0.5); 
+	color: #941709;
+}
+
+.summarybutton_frame { width:726px; height:30px; margin: auto; }
+.summarybutton { width:240px; height:30px; text-align: center; float:left; 
+	font-weight: bold;
+	background-color: rgba(194,152,95,0.14);
+	border:1px solid #CCA876;
+	cursor: pointer; cursor: hand;
+ }
+.summarybutton:hover {
+	background-color: rgba(252,214,131,0.3);
+	color: #634122;
+}
+.summarybutton:active {
+	background-color: rgba(230,186,115,0.5);
+	color: #634122;
+}
+.summarybuttoninactive { width:240px; height:30px; text-align: center; float:left; 
+	font-weight: bold;
+	background-color: rgba(193, 168, 133,0.12);
+	border:1px solid #ccbaa1;
+ }
+
+.narrationnarrow {
+	text-align: left;
+	font-family: Times New Roman;
+	max-width: 400px;
+	min-width: 400px;
+	margin: auto;
+}
+.narrationcenter {
+	text-align: center;
+}
+
+#redvioletgem_top { 
+	position: fixed; 
+	width:140px; 
+	top: 16px; 
+	left: 0; 
+	right: 0; 
+	border: none; 
+	z-index: 3; 
+	margin: auto; 
+}
+
+#redgem{
+    width:42px;
+    margin-right:0px;
+    text-align: center;
+    display: inline-block;
+    margin: auto;
+}
+#divider{
+    width:40px;
+    margin-right:0px;
+    text-align: center;
+    display: inline-block;
+    margin: auto;
+}
+#violetgem{
+    width:42px;
+    margin-right:0px;
+    text-align: center;
+    display: inline-block;
+    margin: auto;
+}
+.child_div_1{
+    margin-right:1px;
+}
+
+#gold_top { 
+	position: fixed; 
+	width:236px; 
+	top: 26px; 
+	left: 0; 
+	right: 0; 
+	border: none; 
+	z-index: 3; 
+}
+
+#gold{
+    width:235px;
+    margin-right:0px;
+    text-align: center;
+    display: inline-block;
+}
+
+#counter {
+	/* position: fixed; */
+	color: blue;
+	/* right: 20px; */
+	/* bottom: 25px; */
+	text-align: center;
+	font-weight: bold;
+	font-size: 1.6em;
+}
+#counter_red {
+	color: #AD1400;
+	text-align: center;
+	font-weight: bold;
+	font-size: 1.4em;
+}
+#counter_violet {
+	color: #DDCAE0; /* 4A0057   */
+	text-align: center;
+	font-weight: bold;
+	font-size: 1.4em;
+}
+
+#counter_gold {
+	color: #BA8900; /* 9E6C00 : dark gold ; EBB728 for tin gold ; B57002 C99400 */
+	/* text-shadow: 2px 1px #000000; */
+	text-align: center;
+	font-weight: bold;
+	font-size: 2em;
+}
+
+
+.button{
+    width:80px;
+}
+
+.infocus {
+	display: block;
+	width: 800px;
+	margin: auto;
+}
+
+.narration {
+	text-align: center;
+	font-family: Times New Roman;
+	max-width: 800px;
+	min-width: 800px;
+	font-weight: bold;
+	color: #634122;
+}
+.narrationcenterplain {
+	text-align: center;
+	font-family: Times New Roman;
+	max-width: 800px;
+	min-width: 800px;
+}
+.narrationleft {
+	text-align: left;
+	font-family: Times New Roman;
+	max-width: 490px;
+	min-width: 490px;
+	margin: auto;
+}
+.narrationright {
+	text-align: right;
+	font-family: Times New Roman;
+	max-width: 490px;
+	min-width: 490px;
+	margin: auto;
+}
+
+.god {
+	text-align: center;
+	font-style: italic;
+	font-family: Arial, sans;
+}
+
+.name_col {
+ 	width: 150px;
+	font-weight: bold;
+	text-align: center;
+	cursor: pointer; cursor: hand;
+}
+
+.desc_col {
+	font-size: 1em;
+	font-family: Times New Roman;
+	cursor: pointer; cursor: hand;
+}
+
+.lifeval_col {
+	font-weight: bold;
+	width: 20px;
+	text-align: right;
+	cursor: pointer; cursor: hand;
+	color: #A60000;
+}
+.skillval_col {
+	font-weight: bold;
+	width: 20px;
+	text-align: right;
+	cursor: pointer; cursor: hand;
+	color: #00259E;
+}
+.powerreq_col {
+	font-weight: bold;
+	width: 20px;
+	text-align: right;
+	cursor: pointer; cursor: hand;
+	color: #4D0069;
+}
+.powerval_col {
+	font-weight: bold;
+	width: 20px;
+	text-align: right;
+	cursor: pointer; cursor: hand;
+	color: #B900BF;
+}
+.goldval_col {
+	font-weight: bold;
+	width: 20px;
+	text-align: right;
+	cursor: pointer; cursor: hand;
+	color: #BA8900; /* B07404 B57002 C99400 */
+}
+
+.buy_col {
+	width: 80px;
+}
+
+.refund_col {
+	width: 80px;
+	display: none;
+	text-align: left;
+}
+
+.purchased td.refund_col {
+	display: table-cell;
+	text-align: left;
+}
+
+.purchased td.buy_col {
+	display: none;
+}
+
+.no_hr {
+	background: none;
+	clear: both;
+	float: none;
+	width: 100%;
+	height: 1px;
+	border: none;
+	margin: -1px 0;
+}
+
+.nodisplay {
+	display: none;
+}
+
+.row_disabled td.buy_col {
+	display: none;
+}
+
+.row_disabled td.refund_col {
+	display: none;
+}
+
+.row_disabled_purchased {
+	background-color: #99dd55;
+}
+
+.row_disabled_purchased td.buy_col{
+	display: none;
+}
+
+.row_disabled_purchased td.refund_col{
+	display: none;
+}
+
+.bonus_col {
+	display: none;
+}
+
+.rolled {
+	background-color: #99dd55;
+}
+
+.rolled td.buy_col{
+	display: none;
+}
+
+.rolled td.refund_col {
+	display: none;
+}
+
+#footer {
+    text-align: center;
+    font-size: 0.7em;
+}
+
+ ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: #333;
+}
+
+li {
+    float: left;
+}
+
+li a {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+
+li a:hover {
+    background-color: #111;
+}

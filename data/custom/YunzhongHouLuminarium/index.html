@@ -1,0 +1,3498 @@
+<!DOCTYPE html>
+<html><script type="text/javascript">window["_gaUserPrefs"] = { ioo : function() { return true; } }</script><head>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+<meta charset="UTF-8">
+<link rel="stylesheet" type="text/css" href="style.css">
+<title>Luminara: A medieval high fantasy character builder</title>
+</head>
+
+<body>
+<script src="script.js" type="text/javascript"></script>
+<div class="noselect">
+
+<div id="coins_top">
+<img src="Coins2.png" class="coins" width="269" height="128">
+</div>
+<div id="stones_top"><div id="stones_center">
+<img src="3stones.png" class="stones">
+</div></div>
+
+<div id="bluegem_top"><div id="bluegem_posshift"><div id="bluegem_center">
+<p id="counter">0</p>
+</div></div></div>
+
+<div id="redvioletgem_top">
+<div id="redgem">
+<div id="counter_red">0</div>
+</div>
+<div id="divider">
+<div id="child_div_1"></div>
+</div>
+<div id="violetgem">
+<div id="counter_violet">0</div>
+</div>
+</div>
+
+<div id="gold_top">
+<div id="gold">
+<div id="counter_gold">0</div>
+</div>
+</div>
+
+<p class="narrationleft">
+<br><br><br><br>
+</p>
+<p id="summary" class="nodisplay"></p>
+<h1 onclick="slidePanel('intro')">Welcome to Luminara:</h1>
+<div id="intro" class="infocus">
+<p class="narration">
+A medieval high fantasy character builder! 
+<br>
+<br>Here you can design characters according to how <i>you</i> want your characters to be, customizing from the wide variety of options below. 
+<br>
+<br>But choose wisely, for with power comes a price...
+</p>
+<br>
+</div>
+
+<hr>
+<p id="summary" class="nodisplay"></p>
+<h1 onclick="slidePanel('story')">The Gift of Inara</h1>
+<div id="story" class="infocus">
+<p class="narrationleft">
+Inara shone as a beacon of light.
+<br>
+<br>It shone in the dawn from its sunbeams bright;
+<br>it shone all aglow from magical might;
+<br>it shone from the armor of ranks of knights;
+<br>it shone with the flight of a thousand living lights.
+<br>Its truly was a gift from the heavens.
+</p>
+<p class="narrationright">
+<br>Then the heavens dropped a gift on Inara.
+</p>
+<p class="narrationleft">
+<br>It was a gift a match for a city, and Inara met its maker. Fire and 
+flame incinerated the living, and shockwaves flattened all the rest. 
+Inara was gone, and its people dead.
+<br>
+<br>The king was dead. So was the prince and heir apparent and the rest 
+of the royal family. So was anyone else of great power. The only people 
+of power left were the nobles scattered throughout the country, and none
+ of them had enough power to usurp the entire empire. They couldn't even
+ usurp the crown and throne of Inara, because there <i>was</i> no crown 
+or throne left of Inara. Nothing was left. All that was left was a 
+crater half a mile deep and half a dozen miles wide. Half the country 
+fell into tumult, and they were the ones who knew what was coming. For 
+who knew what was coming? No one knew, and that meant that war was 
+coming.
+<br>
+<br>War... War always changes. War always changes everything. And with 
+the fall of Inara and the rise of competing factions sweeping across the
+ land, you know it will come and change you too. And yet you embrace the
+ change, for with change comes opportunity, and with opportunities come 
+choice. And so you chose to embrace your destiny. For what is destiny 
+but choices made and opportunities embraced?
+<br>
+</p>
+<p class="narration">
+And so you chose your destiny.
+</p>
+<br>
+</div>
+
+<hr>
+<h1 onclick="slidePanel('family')">Family Background</h1>
+<div id="family" class="infocus">
+<p class="narrationleft">
+Destiny begins with birth, as they say. Who you're born to matters more 
+than who you know or what you do. Witness the common farmer tilling the 
+soil; what destiny shall he have? Yet many are the tales of a farmer boy
+ growing up to accomplish great things. Witness the king atop his 
+throne; surely he's at his apex, with nowhere to go? Well, he's gone 
+now, as is his throne, and his palace, and his city, and his empire. 
+</p>
+<p class="narrationcenterplain">
+Destiny doesn't end with birth. 
+<br>It just begins there.
+</p>
+<p class="narration">
+What is your family's background?<br>
+</p>
+<p class="narrationleft">
+(The number in gold is the amount of gold you received from your family.)<br><br>
+</p>
+<table id="i1a_family">
+	<tbody><tr onclick="toggle('i1a_family',0, false)">
+		<td class="name_col">Orphan</td>
+		<td class="desc_col">You grew up an orphan on the streets of a town or city. You have nothing to your name.</td>
+		<td class="goldval_col">10000</td>
+	</tr>
+	<tr onclick="toggle('i1a_family',1, false)">
+		<td class="name_col">Peasant</td>
+		<td class="desc_col">Your family are peasants from a nameless backwater village.</td>
+		<td class="goldval_col">20000</td>
+	</tr>
+	<tr onclick="toggle('i1a_family',2, false)">
+		<td class="name_col">Worker</td>
+		<td class="desc_col">Yours is a family of rough-and-tough menial laborers with few things to call their own.</td>
+		<td class="goldval_col">50000</td>
+	</tr>
+	<tr onclick="toggle('i1a_family',3, false)">
+		<td class="name_col">Craftsman</td>
+		<td class="desc_col">Your family owns a modest crafts shop; you'd one day take over the family business.</td>
+		<td class="goldval_col">100000</td>
+	</tr>
+	<tr onclick="toggle('i1a_family',4, false)">
+		<td class="name_col">Merchant</td>
+		<td class="desc_col">You come from a merchant family that has done well for itself and made some wealth. </td>
+		<td class="goldval_col">250000</td>
+	</tr>
+	<tr onclick="toggle('i1a_family',5, false)">
+		<td class="name_col">Knight</td>
+		<td class="desc_col">You grew up the son or daughter of a minor knight.</td>
+		<td class="goldval_col">500000</td>
+	</tr>
+	<tr onclick="toggle('i1a_family',6, false)">
+		<td class="name_col">Nobility</td>
+		<td class="desc_col">You are a son or daughter of a major noble house given to a life of comfort. </td>
+		<td class="goldval_col">750000</td>
+	</tr>
+	<tr onclick="toggle('i1a_family',7, false)">
+		<td class="name_col">Royalty</td>
+		<td class="desc_col">You are a son or daughter of the royal family, and many answer to your beck and call.</td>
+		<td class="goldval_col">1000000</td>
+	</tr>
+</tbody></table>
+<hr class="no_hr">
+<br>
+</div>
+
+<hr>
+<h1 onclick="slidePanel('background')">Personal Background</h1>
+<div id="background" class="infocus">
+<p class="narrationleft">
+Destiny begins with birth, but where do you go from there? Where did you
+ go, what did you do, in the years of your youth? For these are the 
+years that will shape who you are, and who you can become.
+</p>
+<p class="narration">
+What did you do in your formative years? 
+<br>
+</p>
+<p class="narrationleft">
+(No need to worry about the numbers to the right. We'll get to that later.)<br><br>
+</p>
+<table id="i1b_background">
+	<tbody><tr onclick="toggle('i1b_background',0, false)">
+		<td class="name_col">Slave</td>
+		<td class="desc_col">You were kidnapped and made a slave - as a boy, 
+forced to perform menial labor and frequently whipped; as a girl, 
+reduced to a life of prostitution in a brothel.</td>
+		<td class="lifeval_col">-</td>
+		<td class="skillval_col">-</td>
+		<td class="goldval_col">-</td>
+	</tr>
+	<tr onclick="toggle('i1b_background',1, false)">
+		<td class="name_col">Tramp</td>
+		<td class="desc_col">You became a beggar on the streets, living a 
+pointless life of scrounging and scraping by and getting chased away by 
+the guards whenever you tried to find a better place to sit.</td>
+		<td class="lifeval_col">-</td>
+		<td class="skillval_col">-</td>
+		<td class="goldval_col">1</td>
+	</tr>
+	<tr onclick="toggle('i1b_background',2, false)">
+		<td class="name_col">Farmer</td>
+		<td class="desc_col">You became just another tiller of the earth, 
+weeding and harvesting the little plot of land that your lord had 
+assigned you, and at other times helping your lord with tasks.</td>
+		<td class="lifeval_col">1</td>
+		<td class="skillval_col">-</td>
+		<td class="goldval_col">2</td>
+	</tr>
+	<tr onclick="toggle('i1b_background',3, false)">
+		<td class="name_col">Laborer</td>
+		<td class="desc_col">You became a menial laborer - a kitchen scullion,
+ miner, smelter, lumberjack, sailor, or fisherman, working long hours 
+for little pay and even less recognition.</td>
+		<td class="lifeval_col">-</td>
+		<td class="skillval_col">-</td>
+		<td class="goldval_col">4</td>
+	</tr>
+	<tr onclick="toggle('i1b_background',4, false)">
+		<td class="name_col">Rogue</td>
+		<td class="desc_col">You became one with the underground factions, and
+ plied the trades of lockpicking, fencing, pickpocketing, bullying, 
+pimping, or even assassination.</td>
+		<td class="lifeval_col">2</td>
+		<td class="skillval_col">-</td>
+		<td class="goldval_col">6</td>
+	</tr>
+	<tr onclick="toggle('i1b_background',5, false)">
+		<td class="name_col">Artisan</td>
+		<td class="desc_col">You became a tailor, tanner, cobbler, carpenter, 
+mason, smith, jeweler, or any other of a numerous trades professions as 
+an artisan's apprentice.</td>
+		<td class="lifeval_col">1</td>
+		<td class="skillval_col">-</td>
+		<td class="goldval_col">8</td>
+	</tr>
+	<tr onclick="toggle('i1b_background',6, false)">
+		<td class="name_col">Guardsman</td>
+		<td class="desc_col">You joined a town guard and learned common techniques with common weapons - the spear, the sword, the axe and the bow.</td>
+		<td class="lifeval_col">3</td>
+		<td class="skillval_col">-</td>
+		<td class="goldval_col">12</td>
+	</tr>
+	<tr onclick="toggle('i1b_background',7, false)">
+		<td class="name_col">Squire</td>
+		<td class="desc_col">You became a page, then a squire, trained in the 
+ways of vassalage and then in the martial arts in preparation for when 
+you'd have to answer your lord's call to war.</td>
+		<td class="lifeval_col">6</td>
+		<td class="skillval_col">-</td>
+		<td class="goldval_col">16</td>
+	</tr>
+	<tr onclick="toggle('i1b_background',8, false)">
+		<td class="name_col">Trader</td>
+		<td class="desc_col">You launched your own business venture and turned
+ it into a thriving enterprise, buying wares from many miles away and 
+selling them for a hefty profit.</td>
+		<td class="lifeval_col">2</td>
+		<td class="skillval_col">-</td>
+		<td class="goldval_col">20</td>
+	</tr>
+	<tr onclick="toggle('i1b_background',9, false)">
+		<td class="name_col">Lady</td>
+		<td class="desc_col">As the daughter of a noble lord, you became 
+trained in the arts and of tending to management of an estate, in 
+preparation for when you'd be married off to another noble.</td>
+		<td class="lifeval_col">1</td>
+		<td class="skillval_col">-</td>
+		<td class="goldval_col">50</td>
+	</tr>
+	<tr onclick="toggle('i1b_background',10, false)">
+		<td class="name_col">Priest</td>
+		<td class="desc_col">You joined the priesthood, and dedicated yourself to a life of meditation and harmony with the luminaria.</td>
+		<td class="lifeval_col">-</td>
+		<td class="skillval_col">3</td>
+		<td class="goldval_col">-</td>
+	</tr>
+	<tr onclick="toggle('i1b_background',11, false)">
+		<td class="name_col">Bard</td>
+		<td class="desc_col">You travel from village to village, singing of 
+epic tales and great deeds done. Along the way you start to learn from 
+them, and become a sort of jack of all trades.</td>
+		<td class="lifeval_col">1</td>
+		<td class="skillval_col">-</td>
+		<td class="goldval_col">5</td>
+	</tr>
+</tbody></table>
+<hr class="no_hr">
+<br>
+</div>
+
+<hr>
+<h1 onclick="slidePanel('personality')">Personality</h1>
+<div id="personality" class="infocus">
+<p class="narrationcenterplain">
+And who <i>have</i>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+ you become? 
+<br>Do you fight for law and justice, or are laws just for others? 
+<br>Do you give your help to all, or do you care for just your own?
+<br>Are your thoughts your own, are your thoughts made known? 
+<br>Do you work on your own, do you never work alone? 
+<br>And do you act before you think, or
+<br>do you think before you act, 
+<br>or do you live carefree 
+<br>and then just 
+<br>react?
+</p>
+<p class="narration">
+How would describe yourself?
+<br>     
+</p>
+<table id="i2a_lawabiding">
+	<tbody><tr onclick="toggle('i2a_lawabiding',0, false)">
+		<td class="name_col">Law Abiding</td>
+		<td class="desc_col">You are a law abiding citizen. You would never do what is immoral or unjust.</td>
+	</tr>
+	<tr onclick="toggle('i2a_lawabiding',1, false)">
+		<td class="name_col">Unscrupulous</td>
+		<td class="desc_col">You seek out opportunity wherever it may lie. Everyone else does it, and you can't fall behind.</td>
+	</tr>
+</tbody></table>
+<br>
+<table id="i2a_altruistic">
+	<tbody><tr onclick="toggle('i2a_altruistic',0, false)">
+		<td class="name_col">Altruistic</td>
+		<td class="desc_col">You do what you can to help those in need, even if you have to make some small sacrifices to do so.</td>
+	</tr>
+	<tr onclick="toggle('i2a_altruistic',1, false)">
+		<td class="name_col">Selfish</td>
+		<td class="desc_col">You know you can't care for everyone. So long as you and those you know are well, that is enough.</td>
+	</tr>
+</tbody></table>
+<br>
+<table id="i2a_introverted">
+	<tbody><tr onclick="toggle('i2a_introverted',0, false)">
+		<td class="name_col">Introverted</td>
+		<td class="desc_col">You don't like to share your thoughts, and find interaction with others to be very draining.</td>
+	</tr>
+	<tr onclick="toggle('i2a_introverted',1, false)">
+		<td class="name_col">Extroverted</td>
+		<td class="desc_col">You fell drawn by excitement, join in the gossip, and freely share stories and suggestions.</td>
+	</tr>
+</tbody></table>
+<br>
+<table id="i2a_independent">
+	<tbody><tr onclick="toggle('i2a_independent',0, false)">
+		<td class="name_col">Independent</td>
+		<td class="desc_col">You work best when you work on your own, as you are efficient and organized... You're just <i>better</i>.</td>
+	</tr>
+	<tr onclick="toggle('i2a_independent',1, false)">
+		<td class="name_col">Collaborative</td>
+		<td class="desc_col">You are a team player, and always know the people you'd need to bring together to get the job done.</td>
+	</tr>
+</tbody></table>
+<br>
+<table id="i2a_impetuous">
+	<tbody><tr onclick="toggle('i2a_impetuous',0, false)">
+		<td class="name_col">Impetuous</td>
+		<td class="desc_col">You just do whatever you need to do. Stopping to think things through just feels wrong.</td>
+	</tr>
+	<tr onclick="toggle('i2a_impetuous',1, false)">
+		<td class="name_col">Deliberative</td>
+		<td class="desc_col">You plan out all your actions, so that when the time comes, your actions are always the right ones.</td>
+	</tr>
+</tbody></table>
+<br>
+<table id="i2a_ambitious">
+	<tbody><tr onclick="toggle('i2a_ambitious',0, false)">
+		<td class="name_col">Ambitious</td>
+		<td class="desc_col">Whatever you seek - be it power, sex, wealth, or glory - you will stop at nothing to achieve it.</td>
+	</tr>
+	<tr onclick="toggle('i2a_ambitious',1, false)">
+		<td class="name_col">Carefree</td>
+		<td class="desc_col">You live life striving to worry as little as possible. You only take action if you must.</td>
+	</tr>
+</tbody></table>
+<hr class="no_hr">
+<br>
+</div>
+
+<hr>
+<h1 onclick="slidePanel('currency')">Personal Wealth</h1>
+<div id="currency" class="infocus">
+<p class="narrationleft">
+You cannot seek out your destiny without at least a modicum of wealth. 
+You were provided financial support by your family (if you had one) 
+according to the wealth they could spare. You also accumulated wealth in
+ whatever work you had done up to this point (unless you were a slave). 
+And eventually, as you take on missions, you will be paid in gold. 
+</p>
+<p class="narration">
+Common units of currency in Luminara:
+</p>
+<div class="currencydisp_frame">
+<div class="currencydisp_child">
+<p class="currencydisp_narration">Copper piece</p>
+<img src="CopperPiece.png" class="currencydisp">
+<p>= 1 copper piece</p>
+</div>
+<div class="currencydisp_child">
+<p class="currencydisp_narration">Silver piece</p>
+<img src="SilverPiece.png" class="currencydisp">
+<p>= 20 copper pieces</p>
+</div>
+<div class="currencydisp_child">
+<p class="currencydisp_narration">Gold piece</p>
+<img src="GoldPiece.png" class="currencydisp">
+<p>= 2,000 copper pieces</p>
+</div>
+</div>
+<p class="narration">
+Copper buys food and board.
+<br>Silver buys labor.
+<br>Gold buys power.
+</p>
+<hr class="no_hr">
+<br>
+</div>
+
+<hr>
+<h1 onclick="slidePanel('bloodline')">Bloodline</h1>
+<div id="bloodline" class="infocus">
+<p class="narrationleft">
+Power has coursed through the lines of nobility for as long as anyone 
+could remember. The most potent blood belongs to the royalty; almost as 
+powerful are the lineages of the nobility, which each boast sorcerous 
+abilities - unleashed with but a word or a gesture. With these powers 
+they have lorded over the lesser mortals of the earth. 
+<br>
+<br>But every once in a while, commoners may discover that despite their
+ poverty, they'd possessed hidden powers after all; and among them hide 
+those whose blood destines them for a life of glory and deeds worthy of 
+legend.
+</p>
+<p class="narration">
+What purity of blood can you claim to have?
+<br>
+</p><p class="narrationleft">
+(The first number reflects your versatility in magic; the second number reflects the power of your magic.) <br>
+<br>
+</p>
+<table id="i1c_bloodline">
+	<tbody><tr onclick="toggle('i1c_bloodline',0, false)">
+		<td class="name_col">Mundane</td>
+		<td class="desc_col">Your blood is as the mud: common throughout the realm, and utterly lacking in potency whatsoever.</td>
+		<td class="skillval_col">-</td>
+		<td class="powerval_col">-</td>
+	</tr>
+	<tr onclick="toggle('i1c_bloodline',1, false)">
+		<td class="name_col">Descendent</td>
+		<td class="desc_col">You have but a sliver of power flowing in your veins, its power diluted over the course of untold generations.</td>
+		<td class="skillval_col">1</td>
+		<td class="powerval_col">1</td>
+	</tr>
+	<tr onclick="toggle('i1c_bloodline',2, false)">
+		<td class="name_col">Latent</td>
+		<td class="desc_col">You have the potential to tap multiple innate powers, but a weak bloodline leaves you magically impotent.</td>
+		<td class="skillval_col">3</td>
+		<td class="powerval_col">-</td>
+	</tr>
+	<tr onclick="toggle('i1c_bloodline',3, false)">
+		<td class="name_col">Blessed</td>
+		<td class="desc_col">Your genealogy is nothing special, yet you have substantial powers, making you a sorcerer to be reckoned with.</td>
+		<td class="skillval_col">2</td>
+		<td class="powerval_col">4</td>
+	</tr>
+	<tr onclick="toggle('i1c_bloodline',4, false)">
+		<td class="name_col">Ascendant</td>
+		<td class="desc_col">You have recently discovered significant powers coursing through you, but are just starting to learn how to wield it.</td>
+		<td class="skillval_col">-</td>
+		<td class="powerval_col">9</td>
+	</tr>
+	<tr onclick="toggle('i1c_bloodline',5, false)">
+		<td class="name_col">Exalted</td>
+		<td class="desc_col">Born of a noble family that can trace its ancestry far back into the forgotten past, your blood holds great power.</td>
+		<td class="skillval_col">1</td>
+		<td class="powerval_col">12</td>
+	</tr>
+	<tr onclick="toggle('i1c_bloodline',6, false)">
+		<td class="name_col">Regal</td>
+		<td class="desc_col">Your bloodline, that of the royalty, has long been regarded as the most pure and most powerful in existence.</td>
+		<td class="skillval_col">3</td>
+		<td class="powerval_col">20</td>
+	</tr>
+	<tr onclick="toggle('i1c_bloodline',7, false)">
+		<td class="name_col">Transcendent</td>
+		<td class="desc_col">Destiny has made you the Chosen One; the powers granted to you by the luminaria are second to none.</td>
+		<td class="skillval_col">7</td>
+		<td class="powerval_col">28</td>
+	</tr>
+	<tr onclick="toggle('i1c_bloodline',8, false)">
+		<td class="name_col">Divine</td>
+		<td class="desc_col">As a reborn god of Luminara, you have pure divine essence invested within you. Unbridled power radiates from your very skin.</td>
+		<td class="skillval_col">9</td>
+		<td class="powerval_col">36</td>
+	</tr>
+</tbody></table>
+<hr class="no_hr">
+<br>
+</div>
+
+<hr>
+<h1 onclick="slidePanel('arcanestudies')">Arcane Studies</h1>
+<div id="arcanestudies" class="infocus">
+<p class="narrationleft">
+Though much about magic is still a mystery, much of it can be studied, 
+practiced, and mastered with due time. The Arcane University of Inara is
+ the best known institution for learning spelltracing and spellsaying, 
+but it is far from the only place where one can learn magic...
+</p>
+<p class="narration">
+How advanced are your studies in the arcane arts?
+<br>     
+</p>
+<table id="i1d0_study">
+	<tbody><tr onclick="toggle('i1d0_study',0, false)">
+		<td class="name_col">No Study</td>
+		<td class="desc_col">You are completely clueless when it comes to 
+magic, having never used or learned about it in your life. Magic is for 
+the wealthy or talented, after all.</td>
+		<td class="skillval_col">-</td>
+		<td class="powerval_col">-</td>
+	</tr>
+	<tr onclick="toggle('i1d0_study',1, false)">
+		<td class="name_col">Initiate</td>
+		<td class="desc_col">You had learned the bare basics about how magic 
+works and have watched others demonstrate spelltracing and spellsaying 
+to you, but you lack hands-on experience.</td>
+		<td class="skillval_col">3</td>
+		<td class="powerval_col">-</td>
+	</tr>
+	<tr onclick="toggle('i1d0_study',2, false)">
+		<td class="name_col">Wilder</td>
+		<td class="desc_col">You had become apprenticed to a hedge witch or 
+wizard and learned the basics of spellcasting from him/her, and have 
+oftentimes used a bit of magic to help with their work.</td>
+		<td class="skillval_col">5</td>
+		<td class="powerval_col">3</td>
+	</tr>
+	<tr onclick="toggle('i1d0_study',3, false)">
+		<td class="name_col">Self Taught</td>
+		<td class="desc_col">You learned magic yourself the hard way - through
+ experimenting and having your spells blow up in your face. It was not 
+easy, and you lack versatility, but you're quite practiced.</td>
+		<td class="skillval_col">2</td>
+		<td class="powerval_col">8</td>
+	</tr>
+	<tr onclick="toggle('i1d0_study',4, false)">
+		<td class="name_col">Tutored</td>
+		<td class="desc_col">Your family acquired you the services of a tutor 
+in the magical arts. From youth you had learned the ways of 
+spellcasting, and now it flows from you with almost instinctive ease.</td>
+		<td class="skillval_col">7</td>
+		<td class="powerval_col">5</td>
+	</tr>
+</tbody></table>
+<br>
+<table id="i1d1_guildassociate">
+	<tbody><tr onclick="toggle('i1d1_guildassociate',0, true, null,null, 'i1d2_guildjourneyman')">
+		<td class="name_col">Associate</td>
+		<td class="desc_col">You joined a town's mage's guild where you 
+proceeded to learn the magical arts. Now you've grown knowledgeable and 
+experienced in a wide range of spells.</td>
+		<td class="skillval_col">8</td>
+		<td class="powerval_col">5</td>
+	</tr>
+</tbody></table>
+<table id="i1d2_guildjourneyman">
+	<tbody><tr onclick="toggle('i1d2_guildjourneyman',0, true, 'i1d1_guildassociate',null, 'i1d3_guildleader', 'i5a_discoveredmagicite')">
+		<td class="name_col">Journeyman</td>
+		<td class="desc_col">Having learned the magical arts under your 
+apprenticeship with the mage's guild, you have set out to travel the 
+realm to gain experience and widen your knowledge. Req. Associate.</td>
+		<td class="skillval_col">6</td>
+		<td class="powerval_col">5</td>
+	</tr>
+</tbody></table>
+<table id="i1d3_guildleader">
+	<tbody><tr onclick="toggle('i1d3_guildleader',0, true, 'i1d2_guildjourneyman',null)">
+		<td class="name_col">Guild Leader</td>
+		<td class="desc_col">After years of service as an associate in the 
+mage's guild, you have become the most trusted member of the local 
+branch and became voted the branch leader. Req. Journeyman.</td>
+		<td class="skillval_col">4</td>
+		<td class="powerval_col">5</td>
+	</tr>
+</tbody></table>
+<br>
+<table id="i1d4_universitystudent">
+	<tbody><tr onclick="toggle('i1d4_universitystudent',0, true, null,null, 'i1d5_universitygraduate')">
+		<td class="name_col">Student</td>
+		<td class="desc_col">You journeyed to the Arcane University and 
+matriculated as a student. There you had access to seemingly endless 
+educational resources with which to learn your magic.</td>
+		<td class="skillval_col">12</td>
+		<td class="powerval_col">2</td>
+	</tr>
+</tbody></table>
+<table id="i1d5_universitygraduate">
+	<tbody><tr onclick="toggle('i1d5_universitygraduate',0, true, 'i1d4_universitystudent',null, 'i1d6_universitymaster')">
+		<td class="name_col">Graduate</td>
+		<td class="desc_col">Having completed your education, you continued on
+ as a graduate, working on research projects assigned by your master. 
+You work on the frontier of your discipline. Req. Student.</td>
+		<td class="skillval_col">8</td>
+		<td class="powerval_col">2</td>
+	</tr>
+</tbody></table>
+<table id="i1d6_universitymaster">
+	<tbody><tr onclick="toggle('i1d6_universitymaster',0, true, 'i1d5_universitygraduate',null, 'i1d7_archmage', 'i5a_sigilinvention')">
+		<td class="name_col">Master</td>
+		<td class="desc_col">You have contributed to your specialty of magic 
+and defended your dissertation before the Mages' Council. A master, you 
+teach classes and lead your own research. Req. Graduate.</td>
+		<td class="skillval_col">8</td>
+		<td class="powerval_col">2</td>
+	</tr>
+</tbody></table>
+<table id="i1d7_archmage">
+	<tbody><tr onclick="toggle('i1d7_archmage',0, true, 'i1d6_universitymaster',null)">
+		<td class="name_col">Archmage</td>
+		<td class="desc_col">You are widely regarded as the most knowledgeable
+ master across all disciplines of magic. Now an archmage, you manage the
+ everyday workings of the University. Req. Master.</td>
+		<td class="skillval_col">8</td>
+		<td class="powerval_col">2</td>
+	</tr>
+</tbody></table>
+<hr class="no_hr">
+<br>
+</div>
+
+<hr>
+<h1 onclick="slidePanel('preciousstones')">Precious Stones</h1>
+<div id="preciousstones" class="infocus">
+<p class="narration">
+The bazaar bustles with gems on display...
+</p>
+<p class="narration">
+Vitalite
+<br></p><div id="smallstones_posshift"><img src="VitaliteSmall.png" class="smallstones"></div>
+<p></p>
+<div class="tradestones_frame">
+<div class="tradestones_sell" onclick="trade_gems('vitalite', 'sell', 3)">
+<p class="noselect">Sell</p>
+</div>
+<div class="tradestones_disp">
+<div class="tradestones_dispprice">
+3
+</div>
+<div class="tradestones_disppricetag">
+gold each
+</div>
+</div>
+<div class="tradestones_buy" onclick="trade_gems('vitalite', 'buy', 3)">
+<p class="noselect">Buy</p>
+</div>
+</div>
+<div class="narrationnarrow"><div class="narrationcenter">
+Draw upon the regenerating life force of virgin vitalite to enhance your physique or to heal yourself and those you care for.
+</div></div>
+<br>
+<p class="narration">
+Magicite
+<br></p><div id="smallstones_posshift"><img src="MagiciteSmall.png" class="smallstones"></div>
+<p></p>
+<div class="tradestones_frame">
+<div class="tradestones_sell" onclick="trade_gems('magicite', 'sell', 5)">
+<p class="noselect">Sell</p>
+</div>
+<div class="tradestones_disp">
+<div class="tradestones_dispprice">
+5
+</div>
+<div class="tradestones_disppricetag">
+gold each
+</div>
+</div>
+<div class="tradestones_buy" onclick="trade_gems('magicite', 'buy', 5)">
+<p class="noselect">Buy</p>
+</div>
+</div>
+<div class="narrationnarrow"><div class="narrationcenter">
+Empower yourself with new and miraculous abilities. Choose what abilities <i>you</i> want, from the most extensive collection of power gem types in all of Luminara.
+</div></div>
+<br>
+<p class="narration">
+Spiritite
+<br></p><div id="smallstones_posshift"><img src="SpirititeSmall.png" class="smallstones"></div>
+<p></p>
+<div class="tradestones_frame">
+<div class="tradestones_sell" onclick="trade_gems('spiritite', 'sell', 4)">
+<p class="noselect">Sell</p>
+</div>
+<div class="tradestones_disp">
+<div class="tradestones_dispprice">
+4
+</div>
+<div class="tradestones_disppricetag">
+gold each
+</div>
+</div>
+<div class="tradestones_buy" onclick="trade_gems('spiritite', 'buy', 4)">
+<p class="noselect">Buy</p>
+</div>
+</div>
+<div class="narrationnarrow"><div class="narrationcenter">
+Draw upon the overwhelming power of spiritite to power your spells. Enlighten your intellect. Bind your minions to your will.
+</div></div>
+<hr class="no_hr">
+<br>
+</div>
+
+<hr>
+<h1 onclick="slidePanel('abilitiesoverview')">Abilities</h1>
+<div id="abilitiesoverview" class="infocus">
+<p class="narration">
+The Luminaran power economy is based on the above gemstones, through 
+which great power can be obtained: physical abilities with vitalite, 
+intellectual abilities with spiritite, and spellcasting abilities with 
+magicite. The columns on the right list out the requirements (negative 
+values) or sources (positive values) by color: Red is vitalite, blue is 
+magicite, purple is spiritite, and gold is gold.
+<br>
+<br>Below follow numerous sections detailing abilities you can get, paid
+ for with various gemstones; you can of course mix and match any 
+combination of these, provided you are wealthy enough. So long as you 
+have the money, you can buy yourself more gemstones; and if you have the
+ wrong ones, you can exchange them. If you still find yourself running 
+out of gems, or the choices are all too tempting for you to pass up on 
+any of them, don't despair. Look carefully, and you will find hidden 
+opportunities.<br></p>
+<hr class="no_hr">
+<br>
+</div>
+
+<hr>
+<h1 onclick="slidePanel('physical')">Physical Abilities</h1>
+<div id="physical" class="infocus">
+<p class="narration">
+Does you possess superhuman physical capabilities?<br>
+</p>
+<table id="i3a_vitality" onclick="toggle('i3a_vitality',0, true)">
+	<tbody><tr>
+		<td class="name_col">Vitality</td>
+		<td class="desc_col">Your blood courses through you with great energy. </td>
+		<td class="lifeval_col">6</td>
+	</tr>
+</tbody></table>
+<br>
+<table id="i3a_stealth" onclick="toggle('i3a_stealth',0, true, null,null, 'i5a_amulettheft')">
+	<tbody><tr>
+		<td class="name_col">Stealth</td>
+		<td class="desc_col">You move in such a way that none can tell when 
+you are pickpocketing or hiding, and you can easily slip past guards and
+ get the jump on assassination targets.</td>
+		<td class="lifeval_col">-2</td>
+	</tr>
+</tbody></table>
+<table id="i3a_celerity" onclick="toggle('i3a_celerity',0, true, null,null)">
+	<tbody><tr>
+		<td class="name_col">Celerity</td>
+		<td class="desc_col">You can rapidly accelerate/decelerate to/from 
+very high speeds, for short periods of time, allowing you to quickly 
+catch up to fleeing targets or to escape from enemies.</td>
+		<td class="lifeval_col">-3</td>
+	</tr>
+</tbody></table>
+<table id="i3a_might" onclick="toggle('i3a_might',0, true, null,null)">
+	<tbody><tr>
+		<td class="name_col">Might</td>
+		<td class="desc_col">Your muscles bulge at the peak of physical fitness. This affords your strikes great penetrating power.</td>
+		<td class="lifeval_col">-4</td>
+	</tr>
+</tbody></table>
+<table id="i3a_agility" onclick="toggle('i3a_agility',0, true, null,null, 'i3a_arrowdodging')">
+	<tbody><tr>
+		<td class="name_col">Agility</td>
+		<td class="desc_col">You can react and move very quickly such as in 
+response to traps activating or enemies attacking (though not fast 
+enough to dodge projectiles).</td>
+		<td class="lifeval_col">-5</td>
+	</tr>
+</tbody></table>
+<table id="i3a_prowess" onclick="toggle('i3a_prowess',0, true, null,null)">
+	<tbody><tr>
+		<td class="name_col">Prowess</td>
+		<td class="desc_col">You know on an almost instinctive level, where to
+ strike for the most effect and when to parry most efficiently, allowing
+ you a martial edge in melee.</td>
+		<td class="lifeval_col">-6</td>
+	</tr>
+</tbody></table>
+<table id="i3a_lightweightleaping" onclick="toggle('i3a_lightweightleaping',0, true, null,null)">
+	<tbody><tr>
+		<td class="name_col">Lightweight Leaping</td>
+		<td class="desc_col">You are able to leap great distances, including 
+over walls, with hardly any effort, and can then land as gracefully as 
+the falling of a feather. </td>
+		<td class="lifeval_col">-8</td>
+	</tr>
+</tbody></table>
+<table id="i3a_arrowdodging" onclick="toggle('i3a_arrowdodging',0, true, 'i3a_agility',null)">
+	<tbody><tr>
+		<td class="name_col">Arrow Dodging</td>
+		<td class="desc_col">You can react fast enough to even dodge 
+projectiles (though very difficult to do when under attack from multiple
+ projectiles simultaneously). Req. Agility.</td>
+		<td class="lifeval_col">-10</td>
+	</tr>
+</tbody></table>
+<br>
+<table id="i3a_regeneration1" onclick="toggle('i3a_regeneration1',0, true, null,null, 'i3a_regeneration2')">
+	<tbody><tr>
+		<td class="name_col">Regeneration I</td>
+		<td class="desc_col">Your body heals far faster than usual. Wounds that would be fatal may leave you sickly for a few days instead.</td>
+		<td class="lifeval_col">-3</td>
+	</tr>
+</tbody></table>
+<table id="i3a_regeneration2" onclick="toggle('i3a_regeneration2',0, true, 'i3a_regeneration1',null, 'i3a_regeneration3')">
+	<tbody><tr>
+		<td class="name_col">Regeneration II</td>
+		<td class="desc_col">Your body heals rapidly. Wounds heal in minutes 
+or at the worst hours, allowing you to return to the battlefield in 
+short order, or to be back in action for the next skirmish. Req. Regeneration I.</td>
+		<td class="lifeval_col">-6</td>
+	</tr>
+</tbody></table>
+<table id="i3a_regeneration3" onclick="toggle('i3a_regeneration3',0, true, 'i3a_regeneration2',null, 'i3a_regeneration4')">
+	<tbody><tr>
+		<td class="name_col">Regeneration III</td>
+		<td class="desc_col">Your body heals very quickly. Wounds heal in minutes, allowing you to resume your quest quickly. Req. Regeneration II.</td>
+		<td class="lifeval_col">-12</td>
+	</tr>
+</tbody></table>
+<table id="i3a_regeneration4" onclick="toggle('i3a_regeneration4',0, true, 'i3a_regeneration3',null)">
+	<tbody><tr>
+		<td class="name_col">Regeneration IV</td>
+		<td class="desc_col">Your body heals extremely quickly. Wounds heal in
+ mere moments, so that you are hard to kill with any but the most 
+devastating of attacks. Req. Regeneration III.</td>
+		<td class="lifeval_col">-18</td>
+	</tr>
+</tbody></table>
+<br>
+<table id="i3a_eternalyouth" onclick="toggle('i3a_eternalyouth',0, true, null,null)">
+	<tbody><tr>
+		<td class="name_col">Eternal Youth</td>
+		<td class="desc_col">Your body will remain eternally in the prime of your years. You will never age and thus have a semblance of immortality.</td>
+		<td class="lifeval_col">-9</td>
+	</tr>
+</tbody></table>
+<hr class="no_hr">
+<br>
+</div>
+
+<hr>
+<h1 onclick="slidePanel('intellectual')">Intellectual Abilities</h1>
+<div id="intellectual" class="infocus">
+<p class="narration">
+Do you boast a sharp mental acumen and sharp social skills?<br>
+</p>
+<table id="i3b_psionic" onclick="toggle('i3b_psionic',0, true)">
+	<tbody><tr>
+		<td class="name_col">Psionic</td>
+		<td class="desc_col">You have unparalleled mental and spiritual faculties.</td>
+		<td class="powerval_col">3</td>
+	</tr>
+</tbody></table>
+<br>
+<table id="i3b_spotting" onclick="toggle('i3b_spotting',0, true, null,null)">
+	<tbody><tr>
+		<td class="name_col">Spotting</td>
+		<td class="desc_col">You can easily stay on anyone you are following 
+and read the tracks they've left behind, and you are fast to notice 
+anything suspicious.</td>
+		<td class="powerval_col">-1</td>
+	</tr>
+</tbody></table>
+<table id="i3b_deceit" onclick="toggle('i3b_deceit',0, true, null,null, 'i5a_grandheist')">
+	<tbody><tr>
+		<td class="name_col">Deceit</td>
+		<td class="desc_col">You spin lies and bluff your opponents with such ease that they may never realize what con you'd just pulled.</td>
+		<td class="powerval_col">-1</td>
+	</tr>
+</tbody></table>
+<table id="i3b_inquisition" onclick="toggle('i3b_inquisition',0, true, null,null, 'i5a_gangblackmail')">
+	<tbody><tr>
+		<td class="name_col">Inquisition</td>
+		<td class="desc_col">You have an almost intuitive grasp of when 
+something doesn't seem right and when someone's telling a lie, and are 
+skilled at seeking out the truth.</td>
+		<td class="powerval_col">-1</td>
+	</tr>
+</tbody></table>
+<table id="i3b_negotiation" onclick="toggle('i3b_negotiation',0, true, null,null)">
+	<tbody><tr>
+		<td class="name_col">Negotiation</td>
+		<td class="desc_col">You always know how to get the best deals on any 
+trades. None can get the best of you on any business opportunities, and 
+you command high pay for your work.</td>
+		<td class="powerval_col">-1</td>
+	</tr>
+</tbody></table>
+<table id="i3b_seduction" onclick="toggle('i3b_seduction',0, true, null,null, 'i5a_beddinggifts')">
+	<tbody><tr>
+		<td class="name_col">Seduction</td>
+		<td class="desc_col">You have a very effective ability to entrance and allure those who would be interested in your gender.</td>
+		<td class="powerval_col">-1</td>
+	</tr>
+</tbody></table>
+<table id="i3b_training" onclick="toggle('i3b_training',0, true, null,null)">
+	<tbody><tr>
+		<td class="name_col">Training</td>
+		<td class="desc_col">You know exactly what to say to correct a flaw in
+ your underlings' stances, tactics and combat teamwork, allowing you to 
+very quickly improve their combat effectiveness.</td>
+		<td class="powerval_col">-2</td>
+	</tr>
+</tbody></table>
+<table id="i3b_memory" onclick="toggle('i3b_memory',0, true, null,null)">
+	<tbody><tr>
+		<td class="name_col">Memory</td>
+		<td class="desc_col">You possess a photographic memory. You forget 
+nothing and can recall anything you have ever seen or experienced with 
+crystal clarity.</td>
+		<td class="powerval_col">-2</td>
+	</tr>
+</tbody></table>
+<table id="i3b_inspiration" onclick="toggle('i3b_inspiration',0, true, null,null, 'i5a_sigilinvention')">
+	<tbody><tr>
+		<td class="name_col">Inspiration</td>
+		<td class="desc_col">Your mind is filled with brilliant ideas and you 
+can readily think of a solution to any but the most daunting or 
+difficult of tasks.</td>
+		<td class="powerval_col">-2</td>
+	</tr>
+</tbody></table>
+<table id="i3b_leadership" onclick="toggle('i3b_leadership',0, true, null,null)">
+	<tbody><tr>
+		<td class="name_col">Leadership</td>
+		<td class="desc_col">You command with the confidence and skill of a 
+veteran general. Your men look up to you for guidance and when you lead,
+ show unfaltering morale and bravery.</td>
+		<td class="powerval_col">-3</td>
+	</tr>
+</tbody></table>
+<table id="i3b_stratagem" onclick="toggle('i3b_stratagem',0, true, null,null)">
+	<tbody><tr>
+		<td class="name_col">Stratagem</td>
+		<td class="desc_col">Your understanding of your allies and enemies are
+ so profound, and your mastery of politics and tactics so complete, that
+ victory is nigh guaranteed before the outset of battle.</td>
+		<td class="powerval_col">-3</td>
+	</tr>
+</tbody></table>
+<table id="i3b_persuasion" onclick="toggle('i3b_persuasion',0, true, null,null)">
+	<tbody><tr>
+		<td class="name_col">Persuasion</td>
+		<td class="desc_col">Your words flow with ease and strike at the 
+hearts and minds of your audience. You will have an easy time persuading
+ them of all but the most outlandish of ideas.</td>
+		<td class="powerval_col">-4</td>
+	</tr>
+</tbody></table>
+<table id="i3b_conversion" onclick="toggle('i3b_conversion',0, true, null,null)">
+	<tbody><tr>
+		<td class="name_col">Conversion</td>
+		<td class="desc_col">Your words instill such zealotry and strike so 
+close to the heart that you can convert strangers into supporters of 
+your cause with but a simple speech.</td>
+		<td class="powerval_col">-6</td>
+	</tr>
+</tbody></table>
+<hr class="no_hr">
+<br>
+</div>
+
+<hr>
+<h1 onclick="slidePanel('sensory')">Sensory Abilities</h1>
+<div id="sensory" class="infocus">
+<p class="narration">
+Does your character have powers of seeing and hearing?<br>
+</p>
+<table id="i3c_truesight" onclick="toggle('i3c_truesight',0, true, null,null)">
+	<tbody><tr>
+		<td class="name_col">True Sight</td>
+		<td class="desc_col">You can see the truth of all things. No illusion 
+will lead you astray, no invisibility will hide anyone from you, no 
+darkness or blinding light will blind you.</td>
+		<td class="lifeval_col">-</td>
+		<td class="skillval_col">-1</td>
+		<td class="powerval_col">-</td>
+	</tr>
+</tbody></table>
+<table id="i3c_arcanesight" onclick="toggle('i3c_arcanesight',0, true, null,null)">
+	<tbody><tr>
+		<td class="name_col">Arcane Sight</td>
+		<td class="desc_col">You can see the pulsing threads of magic in all 
+enchantments, traps, and spells, allowing you to see the design and 
+flaws of the magic and spot any magic users in hiding.</td>
+		<td class="lifeval_col">-</td>
+		<td class="skillval_col">-2</td>
+		<td class="powerval_col">-</td>
+	</tr>
+</tbody></table>
+<table id="i3c_blindsight" onclick="toggle('i3c_blindsight',0, true, null,null)">
+	<tbody><tr>
+		<td class="name_col">Blind Sight</td>
+		<td class="desc_col">You know where the enemy is and where they will 
+move to and where they will strike, so long as they are nearby, even if 
+you have your eyes closed or are blinded.</td>
+		<td class="lifeval_col">-2</td>
+		<td class="skillval_col">-</td>
+		<td class="powerval_col">-</td>
+	</tr>
+</tbody></table>
+<table id="i3c_360degreesight" onclick="toggle('i3c_360degreesight',0, true, null,null)">
+	<tbody><tr>
+		<td class="name_col">360 Degree Sight</td>
+		<td class="desc_col">You can see in all directions at once. However, 
+you can still only focus on one particular location at the time, else 
+the information would overwhelm you.</td>
+		<td class="lifeval_col">-</td>
+		<td class="skillval_col">-1</td>
+		<td class="powerval_col">-</td>
+	</tr>
+</tbody></table>
+<table id="i3c_acutesight" onclick="toggle('i3c_acutesight',0, true, null,null)">
+	<tbody><tr>
+		<td class="name_col">Acute Sight</td>
+		<td class="desc_col">You can see things at high resolution even if they're very far away or very small, as if you had the eyes of an eagle.</td>
+		<td class="lifeval_col">-1</td>
+		<td class="skillval_col">-</td>
+		<td class="powerval_col">-</td>
+	</tr>
+</tbody></table>
+<table id="i3c_nightsight" onclick="toggle('i3c_nightsight',0, true, null,null)">
+	<tbody><tr>
+		<td class="name_col">Night Sight</td>
+		<td class="desc_col">You can see as if everything was well lit, even 
+if in total darkness. This allows you to operate perfectly fine in the 
+middle of the night, or in magical darkness.</td>
+		<td class="lifeval_col">-2</td>
+		<td class="skillval_col">-</td>
+		<td class="powerval_col">-</td>
+	</tr>
+</tbody></table>
+<table id="i3c_penetratingsight" onclick="toggle('i3c_penetratingsight',0, true, null,null)">
+	<tbody><tr>
+		<td class="name_col">Penetrating Sight</td>
+		<td class="desc_col">You can see through objects, though too many objects, or too much solid matter, in the way will still obscure vision.</td>
+		<td class="lifeval_col">-</td>
+		<td class="skillval_col">-1</td>
+		<td class="powerval_col">-1</td>
+	</tr>
+</tbody></table>
+<table id="i3c_astralsight" onclick="toggle('i3c_astralsight',0, true, null,null)">
+	<tbody><tr>
+		<td class="name_col">Astral Sight</td>
+		<td class="desc_col">You can see as if your eyes were hovering right 
+over what you're looking at, even at great distances away from your 
+body. No walls can hinder this sight. </td>
+		<td class="lifeval_col">-</td>
+		<td class="skillval_col">-5</td>
+		<td class="powerval_col">-3</td>
+	</tr>
+</tbody></table>
+<br>
+<table id="i3c_acutehearing" onclick="toggle('i3c_acutehearing',0, true, null,null)">
+	<tbody><tr>
+		<td class="name_col">Acute Hearing</td>
+		<td class="desc_col">You can hear things with crystal clarity from 
+even great distances, allowing you to easily eavesdrop on others and 
+notice the presence of those attempting stealth.</td>
+		<td class="lifeval_col">-1</td>
+		<td class="skillval_col">-</td>
+		<td class="powerval_col">-</td>
+	</tr>
+</tbody></table>
+<table id="i3c_universalcommunication" onclick="toggle('i3c_universalcommunication',0, true, null,null)">
+	<tbody><tr>
+		<td class="name_col">Universal Communication</td>
+		<td class="desc_col">You have the ability to understand all languages 
+instinctively and the ability to speak any language you choose as if you
+ were a native speaker.</td>
+		<td class="lifeval_col">-</td>
+		<td class="skillval_col">-3</td>
+		<td class="powerval_col">-</td>
+	</tr>
+</tbody></table>
+<table id="i3c_animalcommunication" onclick="toggle('i3c_animalcommunication',0, true, null,null)">
+	<tbody><tr>
+		<td class="name_col">Animal Communication</td>
+		<td class="desc_col">You can communicate with (though not give orders 
+to) animals. Such animals behave with greater intelligence than is 
+natural, but only while you are using this ability.</td>
+		<td class="lifeval_col">-2</td>
+		<td class="skillval_col">-2</td>
+		<td class="powerval_col">-</td>
+	</tr>
+</tbody></table>
+<hr class="no_hr">
+<br>
+</div>
+
+<hr>
+<h1 onclick="slidePanel('spellcastingabilities')">Spellcasting Abilities</h1>
+<div id="spellcastingabilities" class="infocus">
+<p class="narration">
+The below sections are various spellcasting abilities you can obtain. 
+New abilities require magicite, with the more complex and versatile 
+abilities requiring more magicite. At the same time, you'll need the 
+magical might provided by spiritite (labeled in dark purple below) in 
+order to power your spells, or else they'll just fizzle. At some point 
+you'll have to make a trade-off between spellcasting versatility or more
+ pure spellpower. 
+<br>
+<br>Many of the more powerful abilities build off others. You'll have to
+ get those prerequisites first. Requirements will be written in the description.<br>
+</p><hr class="no_hr">
+<br>
+</div>
+
+<hr>
+<h1 onclick="slidePanel('telekinetic')">Telekinetic Abilities</h1>
+<div id="telekinetic" class="infocus">
+<p class="narration">
+Does your character possess the ability to move objects at a distance?<br>
+</p>
+<table id="i4a_waterwalking" onclick="toggle('i4a_waterwalking',0, true, null,null)">
+	<tbody><tr>
+		<td class="name_col">Water Walking</td>
+		<td class="desc_col">You are able to stand upon, walk, run, and leap 
+upon the surface of the water as if you were a floating leaf; and to 
+immerse yourself at will.</td>
+		<td class="skillval_col">-1</td>
+		<td class="powerreq_col">7</td>
+	</tr>
+</tbody></table>
+<br>
+<table id="i4a_telekinesis1" onclick="toggle('i4a_telekinesis1',0, true, null,null, 'i4a_telekinesis2', 'i4a_precisetelekinesis','i4a_forcestriking')">
+	<tbody><tr>
+		<td class="name_col">Telekinesis I</td>
+		<td class="desc_col">You can move and stop light objects from a short 
+distance, and manipulate them in simple ways, including opening and 
+closing doors and containers, one object at a time.</td>
+		<td class="skillval_col">-4</td>
+		<td class="powerreq_col">4</td>
+	</tr>
+</tbody></table>
+<table id="i4a_telekinesis2" onclick="toggle('i4a_telekinesis2',0, true, 'i4a_telekinesis1',null, 'i4a_telekinesis3', 'i4a_simultaneoustelekinesis')">
+	<tbody><tr>
+		<td class="name_col">Telekinesis II</td>
+		<td class="desc_col">You can launch light objects and move 
+medium-weight objects (including people, allowing levitation), and 
+manipulate them in simple ways, from up to medium range. Req. Telekinesis I.</td>
+		<td class="skillval_col">-1</td>
+		<td class="powerreq_col">12</td>
+	</tr>
+</tbody></table>
+<table id="i4a_telekinesis3" onclick="toggle('i4a_telekinesis3',0, true, 'i4a_telekinesis2',null)">
+	<tbody><tr>
+		<td class="name_col">Telekinesis III</td>
+		<td class="desc_col">You can launch medium-weight objects (such as 
+hurtling people into walls) and move heavy objects (ie. furniture), and 
+manipulate them in simple ways, from long range. Req. Telekinesis II.</td>
+		<td class="skillval_col">-1</td>
+		<td class="powerreq_col">21</td>
+	</tr>
+</tbody></table>
+<table id="i4a_precisetelekinesis" onclick="toggle('i4a_precisetelekinesis',0, true, 'i4a_telekinesis1',null, 'i4a_telekineticanimation')">
+	<tbody><tr>
+		<td class="name_col">Precise Telekinesis</td>
+		<td class="desc_col">You can apply telekinesis in more complex ways, 
+allowing actions such as using telekinesis to pick a lock or to write a 
+letter. Req. Telekinesis I.</td>
+		<td class="skillval_col">-1</td>
+		<td class="powerreq_col">6</td>
+	</tr>
+</tbody></table>
+<table id="i4a_simultaneoustelekinesis" onclick="toggle('i4a_simultaneoustelekinesis',0, true, 'i4a_telekinesis2',null)">
+	<tbody><tr>
+		<td class="name_col">Simultaneous Telekinesis</td>
+		<td class="desc_col">You can apply telekinetic powers to multiple 
+objects simultaneously. The total mass of such objects however is 
+limited by your Telekinesis level as before. Req. Telekinesis II.</td>
+		<td class="skillval_col">-1</td>
+		<td class="powerreq_col">9</td>
+	</tr>
+</tbody></table>
+<table id="i4a_telekineticanimation" onclick="toggle('i4a_telekineticanimation',0, true, 'i4a_precisetelekinesis',null)">
+	<tbody><tr>
+		<td class="name_col">Telekinetic Animation</td>
+		<td class="desc_col">You can apply telekinesis to animate light items,
+ such as swords and shields, to serve and fight for you. Req. Precise 
+Telekinesis. </td>
+		<td class="powerval_col">-2</td>
+		<td class="skillval_col">-1</td>
+		<td class="powerreq_col">15</td>
+	</tr>
+</tbody></table>
+<table id="i4a_forcestriking" onclick="toggle('i4a_forcestriking',0, true, 'i4a_telekinesis1',null)">
+	<tbody><tr>
+		<td class="name_col">Forcestriking</td>
+		<td class="desc_col">You can add great kinetic thrust to your attacks 
+and to any projectiles you loose, allowing you to strike as if with the 
+force of giants. Req. Telekinesis I.</td>
+		<td class="skillval_col">-1</td>
+		<td class="powerreq_col">8</td>
+	</tr>
+</tbody></table>
+<br>
+<table id="i4a_gravitycasting" onclick="toggle('i4a_gravitycasting',0, true, null,null)">
+	<tbody><tr>
+		<td class="name_col">Gravity Casting</td>
+		<td class="desc_col">You can manipulate gravity to create gravity 
+wells or repulsive fields, attract loose objects or focus them on your 
+enemies, or focus such intense gravity as to crush your victims.</td>
+		<td class="skillval_col">-2</td>
+		<td class="powerreq_col">26</td>
+	</tr>
+</tbody></table>
+<hr class="no_hr">
+<br>
+</div>
+
+<hr>
+<h1 onclick="slidePanel('elemental')">Elemental Abilities</h1>
+<div id="elemental" class="infocus">
+<p class="narration">
+Does your character wield power over the elements?<br>
+</p>
+<table id="i4b_aircasting1" onclick="toggle('i4b_aircasting1',0, true, null,null, 'i4b_aircasting2')">
+	<tbody><tr>
+		<td class="name_col">Air Casting I</td>
+		<td class="desc_col">You can send forth powerful gusts of wind at a 
+target location, outward from your hands or outward in all directions. 
+Unlike telekinesis, these winds are harder to control.</td>
+		<td class="skillval_col">-3</td>
+		<td class="powerreq_col">5</td>
+	</tr>
+</tbody></table>
+<table id="i4b_aircasting2" onclick="toggle('i4b_aircasting2',0, true, 'i4b_aircasting1',null, 'i4b_aircasting3')">
+	<tbody><tr>
+		<td class="name_col">Air Casting II</td>
+		<td class="desc_col">You can summon whirlwinds and send forth gale 
+force winds, or a continuous stream of powerful winds. Unlike 
+telekinesis, these winds are harder to control. Req. Air Casting I.</td>
+		<td class="skillval_col">-1</td>
+		<td class="powerreq_col">14</td>
+	</tr>
+</tbody></table>
+<table id="i4b_aircasting3" onclick="toggle('i4b_aircasting3',0, true, 'i4b_aircasting2',null)">
+	<tbody><tr>
+		<td class="name_col">Air Animation</td>
+		<td class="desc_col">You can create wind elementals to serve you, and 
+can dissipate them. Wind elementals are very chaotic and hard to 
+control. Req. Air Casting II.</td>
+		<td class="powerval_col">-2</td>
+		<td class="skillval_col">-1</td>
+		<td class="powerreq_col">18</td>
+	</tr>
+</tbody></table>
+<table id="i4b_mistcasting" onclick="toggle('i4b_mistcasting',0, true, null,null)">
+	<tbody><tr>
+		<td class="name_col">Mist Casting</td>
+		<td class="desc_col">You can conjure vast swaths of fog and mist to obscure the local area, allowing you to sneak past enemies undetected.</td>
+		<td class="skillval_col">-2</td>
+		<td class="powerreq_col">16</td>
+	</tr>
+</tbody></table>
+<br>
+<table id="i4b_energycasting1" onclick="toggle('i4b_energycasting1',0, true, null,null, 'i4b_energycasting2', 'i4b_purecasting', 'i4b_necroticcasting')">
+	<tbody><tr>
+		<td class="name_col">Energy Casting I</td>
+		<td class="desc_col">You can launch bolts or blasts of destructive 
+energy out from your hands, and temporarily add destructive energies to 
+weaponry and shields.</td>
+		<td class="skillval_col">-2</td>
+		<td class="powerreq_col">6</td>
+	</tr>
+</tbody></table>
+<table id="i4b_energycasting2" onclick="toggle('i4b_energycasting2',0, true, 'i4b_energycasting1',null, 'i4b_energycasting3')">
+	<tbody><tr>
+		<td class="name_col">Energy Casting II</td>
+		<td class="desc_col">You can irradiate distant targets, launch orbs of
+ power, project an unrelenting stream of destructive energy, and create a
+ ward of chaotic energies to burn nearby enemies. Req. Energy Casting I.</td>
+		<td class="skillval_col">-1</td>
+		<td class="powerreq_col">14</td>
+	</tr>
+</tbody></table>
+<table id="i4b_energycasting3" onclick="toggle('i4b_energycasting3',0, true, 'i4b_energycasting2',null)">
+	<tbody><tr>
+		<td class="name_col">Energy Casting III</td>
+		<td class="desc_col">You can launch explosive energy orbs and cause 
+power blasts anywhere you choose, channel disintegration rays, and 
+unleash destructive pulses outward from yourself. Req. Energy Casting II.</td>
+		<td class="skillval_col">-1</td>
+		<td class="powerreq_col">22</td>
+	</tr>
+</tbody></table>
+<table id="i4b_purecasting" onclick="toggle('i4b_purecasting',0, true, 'i4b_energycasting1',null)">
+	<tbody><tr>
+		<td class="name_col">Purifying Casting</td>
+		<td class="desc_col">Your energy casting abilities can be cast with 
+brilliant purifying energies, afflicting the undead, healing the living 
+and ignoring constructs. Req. Energy Casting I.</td>
+		<td class="skillval_col">-2</td>
+		<td class="powerreq_col">8</td>
+	</tr>
+</tbody></table>
+<table id="i4b_necroticcasting" onclick="toggle('i4b_necroticcasting',0, true, 'i4b_energycasting1',null, 'i4b_corruptedcasting')">
+	<tbody><tr>
+		<td class="name_col">Necrotic Casting</td>
+		<td class="desc_col">Your energy casting abilities can be cast with 
+sickly necrotic energies, afflicting the living, healing the undead and 
+ignoring constructs. Req. Energy Casting I.</td>
+		<td class="skillval_col">-2</td>
+		<td class="powerreq_col">9</td>
+	</tr>
+</tbody></table>
+<table id="i4b_corruptedcasting" onclick="toggle('i4b_corruptedcasting',0, true, 'i4b_necroticcasting',null, 'i4b_virulentcasting')">
+	<tbody><tr>
+		<td class="name_col">Corrupted Casting</td>
+		<td class="desc_col">Your energy casting abilities can be cast with 
+shadowy corrupting energies, so that wounds they cause can never be 
+healed. Req. Necrotic Casting.</td>
+		<td class="skillval_col">-3</td>
+		<td class="powerreq_col">13</td>
+	</tr>
+</tbody></table>
+<table id="i4b_virulentcasting" onclick="toggle('i4b_virulentcasting',0, true, 'i4b_corruptedcasting',null)">
+	<tbody><tr>
+		<td class="name_col">Virulent Casting</td>
+		<td class="desc_col">Your energy casting abilities can be cast with 
+virulent spell energies which will continue to grow and eat away at your
+ victim until there's nothing left. Req. Corrupted Casting.</td>
+		<td class="skillval_col">-4</td>
+		<td class="powerreq_col">19</td>
+	</tr>
+</tbody></table>
+<br>
+<table id="i4b_lightningcasting1" onclick="toggle('i4b_lightningcasting1',0, true, null,null, 'i4b_lightningcasting2')">
+	<tbody><tr>
+		<td class="name_col">Lightning Casting I</td>
+		<td class="desc_col">You can create electrical sparks, launch charged 
+bolts or channel electricity from your hands, and temporarily add 
+electricity to weaponry and shields.</td>
+		<td class="skillval_col">-2</td>
+		<td class="powerreq_col">6</td>
+	</tr>
+</tbody></table>
+<table id="i4b_lightningcasting2" onclick="toggle('i4b_lightningcasting2',0, true, 'i4b_lightningcasting1',null, 'i4b_lightningcasting3', 'i4b_lightninganimation')">
+	<tbody><tr>
+		<td class="name_col">Lightning Casting II</td>
+		<td class="desc_col">You can electrocute distant targets, launch ball 
+lightning, channel chain lightning, and create an electric ward to shock
+ nearby enemies. Req. Lightning Casting I.</td>
+		<td class="skillval_col">-1</td>
+		<td class="powerreq_col">14</td>
+	</tr>
+</tbody></table>
+<table id="i4b_lightningcasting3" onclick="toggle('i4b_lightningcasting3',0, true, 'i4b_lightningcasting2',null)">
+	<tbody><tr>
+		<td class="name_col">Lightning Casting III</td>
+		<td class="desc_col">You can evoke powerful discharges of electrical 
+energy, call down lightning strikes, channel lightning beams, and 
+release pulses of electricity outward from yourself. Req. Lightning Casting II.</td>
+		<td class="skillval_col">-1</td>
+		<td class="powerreq_col">22</td>
+	</tr>
+</tbody></table>
+<table id="i4b_lightninganimation" onclick="toggle('i4b_lightninganimation',0, true, 'i4b_lightningcasting2',null)">
+	<tbody><tr>
+		<td class="name_col">Lightning Animation</td>
+		<td class="desc_col">You can create spark elementals to serve you, and
+ can dissipate them. Req. Lightning Casting II. With Lightning Casting 
+III, they can channel lightning at distant enemies.</td>
+		<td class="powerval_col">-2</td>
+		<td class="skillval_col">-1</td>
+		<td class="powerreq_col">26</td>
+	</tr>
+</tbody></table>
+<br>
+<table id="i4b_firecasting1" onclick="toggle('i4b_firecasting1',0, true, null,null, 'i4b_firecasting2')">
+	<tbody><tr>
+		<td class="name_col">Fire Casting I</td>
+		<td class="desc_col">You can ignite and vanish flames, launch bolts or
+ blasts of fire out from your hands, and temporarily add flame to 
+weaponry and shields.</td>
+		<td class="skillval_col">-3</td>
+		<td class="powerreq_col">5</td>
+	</tr>
+</tbody></table>
+<table id="i4b_firecasting2" onclick="toggle('i4b_firecasting2',0, true, 'i4b_firecasting1',null, 'i4b_firecasting3', 'i4b_fireanimation')">
+	<tbody><tr>
+		<td class="name_col">Fire Casting II</td>
+		<td class="desc_col">You can combust distant targets, launch many 
+bolts of fire, project an unrelenting stream of fire, and create a ward 
+of flame to burn nearby enemies. Req. Fire Casting I.</td>
+		<td class="skillval_col">-1</td>
+		<td class="powerreq_col">13</td>
+	</tr>
+</tbody></table>
+<table id="i4b_firecasting3" onclick="toggle('i4b_firecasting3',0, true, 'i4b_firecasting2',null)">
+	<tbody><tr>
+		<td class="name_col">Fire Casting III</td>
+		<td class="desc_col">You can launch fireballs and cause eruptions of 
+flame anywhere you choose, channel heat rays, and release expanding 
+rings of fire outward from yourself. Req. Fire Casting II.</td>
+		<td class="skillval_col">-1</td>
+		<td class="powerreq_col">21</td>
+	</tr>
+</tbody></table>
+<table id="i4b_fireanimation" onclick="toggle('i4b_fireanimation',0, true, 'i4b_firecasting2',null)">
+	<tbody><tr>
+		<td class="name_col">Fire Animation</td>
+		<td class="desc_col">You can create fire elementals to serve you, and 
+can dissipate them. Req. Fire Casting II. With Fire Casting III, they 
+can launch bolts of fire at enemies.</td>
+		<td class="powerval_col">-2</td>
+		<td class="skillval_col">-1</td>
+		<td class="powerreq_col">25</td>
+	</tr>
+</tbody></table>
+<br>
+<table id="i4b_watercasting" onclick="toggle('i4b_watercasting',0, true, null,null, 'i4b_wateranimation', 'i4b_coldcasting1')">
+	<tbody><tr>
+		<td class="name_col">Water Casting</td>
+		<td class="desc_col">You can create and vanish water, launch jets of 
+water from your hands, raise water up from the ground or bodies of 
+water, launch waves of water, and walk on water.</td>
+		<td class="skillval_col">-3</td>
+		<td class="powerreq_col">2</td>
+	</tr>
+</tbody></table>
+<table id="i4b_wateranimation" onclick="toggle('i4b_wateranimation',0, true, 'i4b_watercasting',null)">
+	<tbody><tr>
+		<td class="name_col">Water Animation</td>
+		<td class="desc_col">You can create water elementals to serve you, and
+ can dissipate them. Req. Water Casting. They can launch bursts of water
+ at enemies.</td>
+		<td class="powerval_col">-2</td>
+		<td class="skillval_col">-1</td>
+		<td class="powerreq_col">6</td>
+	</tr>
+</tbody></table>
+<table id="i4b_coldcasting1" onclick="toggle('i4b_coldcasting1',0, true, 'i4b_watercasting',null, 'i4b_coldcasting2')">
+	<tbody><tr>
+		<td class="name_col">Cold Casting I</td>
+		<td class="desc_col">You can create and vanish ice, launch ice bolts 
+or blasts of freezing cold out from your hands, and temporarily add 
+freezing cold to weaponry and shields. Req. Water Casting.</td>
+		<td class="skillval_col">-3</td>
+		<td class="powerreq_col">3</td>
+	</tr>
+</tbody></table>
+<table id="i4b_coldcasting2" onclick="toggle('i4b_coldcasting2',0, true, 'i4b_coldcasting1',null, 'i4b_coldcasting3', 'i4b_coldanimation')">
+	<tbody><tr>
+		<td class="name_col">Cold Casting II</td>
+		<td class="desc_col">You can freeze distant targets, launch many bolts
+ of freezing cold, project an unrelenting stream of cold, and create a 
+ward of frost to burn nearby enemies. Req. Cold Casting I.</td>
+		<td class="skillval_col">-1</td>
+		<td class="powerreq_col">9</td>
+	</tr>
+</tbody></table>
+<table id="i4b_coldcasting3" onclick="toggle('i4b_coldcasting3',0, true, 'i4b_coldcasting2',null)">
+	<tbody><tr>
+		<td class="name_col">Cold Casting III</td>
+		<td class="desc_col">You can launch glacial bolts of extreme cold, 
+encase targets in blocks of ice, channel frost beams, and release 
+expanding rings of cold outward from yourself. Req. Cold Casting II.</td>
+		<td class="skillval_col">-1</td>
+		<td class="powerreq_col">15</td>
+	</tr>
+</tbody></table>
+<table id="i4b_coldanimation" onclick="toggle('i4b_coldanimation',0, true, 'i4b_coldcasting2',null)">
+	<tbody><tr>
+		<td class="name_col">Cold Animation</td>
+		<td class="desc_col">You can create cold and ice elementals to serve 
+you, and can dissipate them. Req. Cold Casting II. With Cold Casting 
+III, they can launch freezing bolts or ice bolts at enemies.</td>
+		<td class="powerval_col">-2</td>
+		<td class="skillval_col">-1</td>
+		<td class="powerreq_col">19</td>
+	</tr>
+</tbody></table>
+<br>
+<table id="i4b_toxiccasting1" onclick="toggle('i4b_toxiccasting1',0, true, null,null, 'i4b_toxiccasting2')">
+	<tbody><tr>
+		<td class="name_col">Toxic Casting I</td>
+		<td class="desc_col">You can create and vanish acid and poison, launch
+ corrosive bolts or blasts of poison from your hands, and temporarily 
+add poison to weaponry and shields. </td>
+		<td class="skillval_col">-3</td>
+		<td class="powerreq_col">4</td>
+	</tr>
+</tbody></table>
+<table id="i4b_toxiccasting2" onclick="toggle('i4b_toxiccasting2',0, true, 'i4b_toxiccasting1',null, 'i4b_toxiccasting3', 'i4b_toxicanimation')">
+	<tbody><tr>
+		<td class="name_col">Toxic Casting II</td>
+		<td class="desc_col">You can poison victims' blood from afar, launch 
+rusting bolts to corrode armor, project an unrelenting stream of poison 
+or acid, and create a toxic ward to poison enemies. Req. Toxic Casting I.</td>
+		<td class="skillval_col">-1</td>
+		<td class="powerreq_col">12</td>
+	</tr>
+</tbody></table>
+<table id="i4b_toxiccasting3" onclick="toggle('i4b_toxiccasting3',0, true, 'i4b_toxiccasting2',null)">
+	<tbody><tr>
+		<td class="name_col">Toxic Casting III</td>
+		<td class="desc_col">You can launch large gobs of poison or acid and 
+cause corrosive eruptions anywhere you choose, and release expanding 
+rings of acid or poison outward from yourself.  Req. Toxic Casting II.</td>
+		<td class="skillval_col">-1</td>
+		<td class="powerreq_col">12</td>
+	</tr>
+</tbody></table>
+<table id="i4b_toxicanimation" onclick="toggle('i4b_toxicanimation',0, true, 'i4b_toxiccasting2',null)">
+	<tbody><tr>
+		<td class="name_col">Toxic Animation</td>
+		<td class="desc_col">You can create poison and acid oozes to serve 
+you, and can dissipate them. Req. Toxic Casting II. With Toxic Casting 
+III, they can launch toxic bolts at enemies.</td>
+		<td class="powerval_col">-2</td>
+		<td class="skillval_col">-1</td>
+		<td class="powerreq_col">24</td>
+	</tr>
+</tbody></table>
+<br>
+<table id="i4b_webcasting" onclick="toggle('i4b_webcasting',0, true, null,null)">
+	<tbody><tr>
+		<td class="name_col">Web Casting</td>
+		<td class="desc_col">You can create and vanish spidersilk and glue, 
+launch webbing from your mouth, and ensnare and bind your enemies; and 
+can stick to and climb along walls and ceilings.</td>
+		<td class="skillval_col">-2</td>
+		<td class="powerreq_col">4</td>
+	</tr>
+</tbody></table>
+<br>
+<table id="i4b_earthcasting1" onclick="toggle('i4b_earthcasting1',0, true, null,null, 'i4b_earthcasting2', 'i4d_biomasscasting')">
+	<tbody><tr>
+		<td class="name_col">Earth Casting I</td>
+		<td class="desc_col">You can break pieces of earth, mud and clay from 
+the ground and pull them up and move, launch, or stop pieces of earth or
+ stone, and merge or split pieces of earth, or blast sand.</td>
+		<td class="skillval_col">-5</td>
+		<td class="powerreq_col">7</td>
+	</tr>
+</tbody></table>
+<table id="i4b_earthcasting2" onclick="toggle('i4b_earthcasting2',0, true, 'i4b_earthcasting1',null, 'i4b_earthcasting3', 'i4b_earthanimation', 'i4b_stonecasting')">
+	<tbody><tr>
+		<td class="name_col">Earth Casting II</td>
+		<td class="desc_col">You can harden or soften the earth, raise earth 
+and clay into barriers and with effort, structures, and collapse them. 
+Req. I. With Stone Casting, can launch shrapnel at enemies. Req. Earth Casting I.</td>
+		<td class="skillval_col">-1</td>
+		<td class="powerreq_col">15</td>
+	</tr>
+</tbody></table>
+<table id="i4b_earthcasting3" onclick="toggle('i4b_earthcasting3',0, true, 'i4b_earthcasting2',null)">
+	<tbody><tr>
+		<td class="name_col">Earth Casting III</td>
+		<td class="desc_col">You can cause the earth to erupt at enemies 
+either at a target location, or in an expanding ring outward from 
+yourself. Req. II. With Stone Casting, can raise or lower the ground. Req. Earth Casting II.</td>
+		<td class="skillval_col">-1</td>
+		<td class="powerreq_col">23</td>
+	</tr>
+</tbody></table>
+<table id="i4b_earthanimation" onclick="toggle('i4b_earthanimation',0, true, 'i4b_earthcasting2',null)">
+	<tbody><tr>
+		<td class="name_col">Earth Animation</td>
+		<td class="desc_col">You can create golems of earth and clay, or stone
+ (req Stone Casting, or metal (req Metal Casting), to serve you, and can
+ collapse them. Req. Earth Casting II. </td>
+		<td class="powerval_col">-2</td>
+		<td class="skillval_col">-1</td>
+		<td class="powerreq_col">27</td>
+	</tr>
+</tbody></table>
+<table id="i4b_stonecasting" onclick="toggle('i4b_stonecasting',0, true, 'i4b_earthcasting2',null, 'i4b_metalcasting')">
+	<tbody><tr>
+		<td class="name_col">Stone Casting</td>
+		<td class="desc_col">You can shape, break, and merge stone, launch 
+stones at enemies, stop them, raise stone into barriers, collapse them, 
+or reshape stone to ensnare targets. Req. Earth Casting II.</td>
+		<td class="skillval_col">-4</td>
+		<td class="powerreq_col">19</td>
+	</tr>
+</tbody></table>
+<table id="i4b_metalcasting" onclick="toggle('i4b_metalcasting',0, true, 'i4b_stonecasting',null)">
+	<tbody><tr>
+		<td class="name_col">Metal Casting</td>
+		<td class="desc_col">You can shape, break, and merge ore and metal, 
+pull them from the ground, and with skill and effort, shape them into 
+useful items and can move and stop metal. Req. Stone Casting.</td>
+		<td class="skillval_col">-4</td>
+		<td class="powerreq_col">25</td>
+	</tr>
+</tbody></table>
+<hr class="no_hr">
+<br>
+</div>
+
+<hr>
+<h1 onclick="slidePanel('vitality')">Vitality Abilities</h1>
+<div id="vitality" class="infocus">
+<p class="narration">
+Does your character have the ability to heal and regenerate, or steal and give vitality?<br>
+</p>
+<table id="i4c_lifestealingkiss" onclick="toggle('i4c_lifestealingkiss',0, true, null,null, 'i4c_lifestealingtouch')">
+	<tbody><tr>
+		<td class="name_col">Lifestealing Kiss</td>
+		<td class="desc_col">You can drain life away from anyone you kiss, though they will notice this happening. The stolen lifeforce is added to your own.</td>
+		<td class="lifeval_col">-1</td>
+		<td class="skillval_col">-1</td>
+		<td class="powerreq_col">2</td>
+	</tr>
+</tbody></table>
+<table id="i4c_lifestealingtouch" onclick="toggle('i4c_lifestealingtouch',0, true, 'i4c_lifestealingkiss',null, 'i4c_lifestealingstrike')">
+	<tbody><tr>
+		<td class="name_col">Lifestealing Touch</td>
+		<td class="desc_col">You can drain life away from anyone you are 
+touching, though they will notice this happening. The stolen lifeforce 
+is added to your own. Req. Lifestealing Kiss.</td>
+		<td class="lifeval_col">-1</td>
+		<td class="skillval_col">-1</td>
+		<td class="powerreq_col">4</td>
+	</tr>
+</tbody></table>
+<table id="i4c_lifestealingstrike" onclick="toggle('i4c_lifestealingstrike',0, true, 'i4c_lifestealingtouch',null, 'i4c_vitalitydraining')">
+	<tbody><tr>
+		<td class="name_col">Lifestealing Strike</td>
+		<td class="desc_col">You can add lifestealing ability to your weapons 
+(with every hit made), or with your armor, and shields (with every hit 
+blocked). Req. Lifestealing Touch.</td>
+		<td class="lifeval_col">-1</td>
+		<td class="skillval_col">-1</td>
+		<td class="powerreq_col">10</td>
+	</tr>
+</tbody></table>
+<table id="i4c_vitalitydraining" onclick="toggle('i4c_vitalitydraining',0, true, 'i4c_lifestealingstrike',null)">
+	<tbody><tr>
+		<td class="name_col">Vitality Draining</td>
+		<td class="desc_col">You can steal the lifeforce from anyone near you,
+ without the need to even touch them. Enemies approach you only a great 
+personal danger. Req. Lifestealing Strike.</td>
+		<td class="lifeval_col">-2</td>
+		<td class="skillval_col">-1</td>
+		<td class="powerreq_col">28</td>
+	</tr>
+</tbody></table>
+<table id="i4c_lifegrantingkiss" onclick="toggle('i4c_lifegrantingkiss',0, true, null,null)">
+	<tbody><tr>
+		<td class="name_col">Lifegranting Kiss</td>
+		<td class="desc_col">You can channel life into anyone you kiss. This 
+drains your own lifeforce unless you have excess lifeforce (such as 
+through Lifestealing Kiss).</td>
+		<td class="lifeval_col">-1</td>
+		<td class="skillval_col">-1</td>
+		<td class="powerreq_col">1</td>
+	</tr>
+</tbody></table>
+<table id="i4c_lifegrantingtouch" onclick="toggle('i4c_lifegrantingtouch',0, true, null,null)">
+	<tbody><tr>
+		<td class="name_col">Lifegranting Touch</td>
+		<td class="desc_col">You can channel life into anyone you touch. This 
+drains your own lifeforce unless you have excess lifeforce (such as 
+through Lifestealing Touch).</td>
+		<td class="lifeval_col">-1</td>
+		<td class="skillval_col">-1</td>
+		<td class="powerreq_col">3</td>
+	</tr>
+</tbody></table>
+<br>
+<table id="i4c_healing1" onclick="toggle('i4c_healing1',0, true, null,null, 'i4c_healing2')">
+	<tbody><tr>
+		<td class="name_col">Healing I</td>
+		<td class="desc_col">You can heal anyone (including yourself) at a 
+touch. It may take you anywhere from hours (light wounds) to days 
+(near-fatal) to fully heal someone's wounds.</td>
+		<td class="lifeval_col">-4</td>
+		<td class="skillval_col">-6</td>
+		<td class="powerreq_col">2</td>
+	</tr>
+</tbody></table>
+<table id="i4c_healing2" onclick="toggle('i4c_healing2',0, true, 'i4c_healing1',null, 'i4c_healing3')">
+	<tbody><tr>
+		<td class="name_col">Healing II</td>
+		<td class="desc_col">You can heal rather quickly both at touch and at 
+short range. It may take you anywhere from minutes (light wounds) to 
+hours (near-fatal) to fully heal someone's wounds. Req. Healing I.</td>
+		<td class="lifeval_col">-8</td>
+		<td class="skillval_col">-1</td>
+		<td class="powerreq_col">6</td>
+	</tr>
+</tbody></table>
+<table id="i4c_healing3" onclick="toggle('i4c_healing3',0, true, 'i4c_healing2',null, 'i4c_healing4','i4d_anthromorphing')">
+	<tbody><tr>
+		<td class="name_col">Healing III</td>
+		<td class="desc_col">You can heal quickly both at touch and at short 
+range It may take you anywhere from moments (light wounds) to minutes 
+(near-fatal) to fully heal someone's wounds. Req. Healing II.</td>
+		<td class="lifeval_col">-16</td>
+		<td class="skillval_col">-1</td>
+		<td class="powerreq_col">12</td>
+	</tr>
+</tbody></table>
+<table id="i4c_healing4" onclick="toggle('i4c_healing4',0, true, 'i4c_healing3',null)">
+	<tbody><tr>
+		<td class="name_col">Healing IV</td>
+		<td class="desc_col">You can heal very rapidly both at touch and at 
+medium range. It will take mere moments to fully heal someone's wounds; 
+or you can heal several at once (though slower). Req. Healing III.</td>
+		<td class="lifeval_col">-24</td>
+		<td class="skillval_col">-1</td>
+		<td class="powerreq_col">20</td>
+	</tr>
+</tbody></table>
+<hr class="no_hr">
+<br>
+</div>
+
+<hr>
+<h1 onclick="slidePanel('corporeal')">Corporeal Abilities</h1>
+<div id="corporeal" class="infocus">
+<p class="narration">
+Does your character possess the ability to control plant, flesh and body?<br>
+</p>
+<table id="i4d_biomasscasting" onclick="toggle('i4d_biomasscasting',0, true, 'i4b_earthcasting1',null, 'i4d_biomassanimation')">
+	<tbody><tr>
+		<td class="name_col">Biomass Casting</td>
+		<td class="desc_col">You can shape, break, merge, move and stop plant 
+matter, including wood and bark, fungal matter, and well-decomposed 
+biomass (but not corpses). Req. Earth Casting I.</td>
+		<td class="skillval_col">-5</td>
+		<td class="powerreq_col">7</td>
+	</tr>
+</tbody></table>
+<table id="i4d_biomassanimation" onclick="toggle('i4d_biomassanimation',0, true, 'i4d_biomasscasting',null)">
+	<tbody><tr>
+		<td class="name_col">Biomass Animation</td>
+		<td class="desc_col">You can create golems of plant matter, including 
+wood and bark, fungal matter, and well-decomposed biomass (but not 
+corpses). Req. Biomass Casting.</td>
+		<td class="powerval_col">-2</td>
+		<td class="skillval_col">-1</td>
+		<td class="powerreq_col">11</td>
+	</tr>
+</tbody></table>
+<br>
+<table id="i4d_corporealcasting1" onclick="toggle('i4d_corporealcasting1',0, true, null,null, 'i4d_corporealcasting2','i4d_corporealanimation1')">
+	<tbody><tr>
+		<td class="name_col">Corporeal Casting I</td>
+		<td class="desc_col">You can shape, break, merge, move and stop flesh,
+ blood, skin and bone, but only that of corpses. Can launch bone shards,
+ skin a corpse, or erupt a corpse in a shower of gore.</td>
+		<td class="skillval_col">-6</td>
+		<td class="powerreq_col">9</td>
+	</tr>
+</tbody></table>
+<table id="i4d_corporealcasting2" onclick="toggle('i4d_corporealcasting2',0, true, 'i4d_corporealcasting1',null, 'i4d_corporealcasting3','i4d_anthromorphing')">
+	<tbody><tr>
+		<td class="name_col">Corporeal Casting II</td>
+		<td class="desc_col">Your ability to manipulate the body extends to 
+that of the living, to a limited extent. You can open wounds in your 
+victims, mutilate or deform their bodies and cause pain. Req. Corporeal Casting I.</td>
+		<td class="skillval_col">-1</td>
+		<td class="powerreq_col">17</td>
+	</tr>
+</tbody></table>
+<table id="i4d_corporealcasting3" onclick="toggle('i4d_corporealcasting3',0, true, 'i4d_corporealcasting2',null)">
+	<tbody><tr>
+		<td class="name_col">Corporeal Casting III</td>
+		<td class="desc_col">You have an improved ability to manipulate living
+ bodies. You can open wounds in your victims, shatter their bones, rip 
+their guts out and skin them alive. Req. Corporeal Casting II.</td>
+		<td class="skillval_col">-1</td>
+		<td class="powerreq_col">25</td>
+	</tr>
+</tbody></table>
+<table id="i4d_anthromorphing" onclick="toggle('i4d_anthromorphing',0, true, 'i4d_corporealcasting2','i4c_healing3', 'i4d_creaturemorphing','i4d_ressurection','i4d_cloning')">
+	<tbody><tr>
+		<td class="name_col">Anthromorphing</td>
+		<td class="desc_col">You can morph your or other humanoids' bodies 
+into humanoid bodies of your own design, ie. making someone resemble 
+someone else. Req. Corporeal Casting II, Healing III.</td>
+		<td class="lifeval_col">-4</td>
+		<td class="skillval_col">-1</td>
+		<td class="powerreq_col">23</td>
+	</tr>
+</tbody></table>
+<table id="i4d_creaturemorphing" onclick="toggle('i4d_creaturemorphing',0, true, 'i4d_anthromorphing',null, 'i4d_monstermorphing')">
+	<tbody><tr>
+		<td class="name_col">Creaturemorphing</td>
+		<td class="desc_col">You can morph your or others' bodies into that of other critters and creatures altogether. Req. Anthromorphing.</td>
+		<td class="lifeval_col">-2</td>
+		<td class="skillval_col">-1</td>
+		<td class="powerreq_col">27</td>
+	</tr>
+</tbody></table>
+<table id="i4d_monstermorphing" onclick="toggle('i4d_monstermorphing',0, true, 'i4d_creaturemorphing',null)">
+	<tbody><tr>
+		<td class="name_col">Monstermorphing</td>
+		<td class="desc_col">You can morph your or others' bodies into that of
+ powerful monsters or even of never-seen-before chimeras of your own 
+creation. Req. Creaturemorphing.</td>
+		<td class="lifeval_col">-2</td>
+		<td class="skillval_col">-1</td>
+		<td class="powerreq_col">32</td>
+	</tr>
+</tbody></table>
+<table id="i4d_corporealanimation1" onclick="toggle('i4d_corporealanimation1',0, true, 'i4d_corporealcasting1',null, 'i4d_corporealanimation2','i4d_bodycontrol')">
+	<tbody><tr>
+		<td class="name_col">Corporeal Animation I</td>
+		<td class="desc_col">You can animate the corpses or skeletons of the 
+dead, making them your minions, though with a limit on how many you can 
+control. Req. Corporeal Casting I.</td>
+		<td class="powerval_col">-2</td>
+		<td class="skillval_col">-1</td>
+		<td class="powerreq_col">20</td>
+	</tr>
+</tbody></table>
+<table id="i4d_corporealanimation2" onclick="toggle('i4d_corporealanimation2',0, true, 'i4d_corporealanimation1',null)">
+	<tbody><tr>
+		<td class="name_col">Corporeal Animation II</td>
+		<td class="desc_col">You are able to adeptly manipulate the bodies of a
+ great many of the undead even in the midst of battle, effectively 
+making you an undead general. Req. Corporeal Animation I.</td>
+		<td class="powerval_col">-3</td>
+		<td class="skillval_col">-1</td>
+		<td class="powerreq_col">24</td>
+	</tr>
+</tbody></table>
+<table id="i4d_bodycontrol" onclick="toggle('i4d_bodycontrol',0, true, 'i4d_corporealanimation1',null, 'i4d_cloning', 'i5a_royalenslavement')">
+	<tbody><tr>
+		<td class="name_col">Body Control</td>
+		<td class="desc_col">Your ability to animate the body extends to the 
+living, allowing you to take control over living beings so well that 
+others may not even notice. Req. Corporeal Animation I.</td>
+		<td class="powerval_col">-1</td>
+		<td class="skillval_col">-1</td>
+		<td class="powerreq_col">33</td>
+	</tr>
+</tbody></table>
+<table id="i4d_cloning" onclick="toggle('i4d_cloning',0, true, 'i4d_anthromorphing','i4d_bodycontrol')">
+	<tbody><tr>
+		<td class="name_col">Cloning</td>
+		<td class="desc_col">You can create exact replicas of yourself, albeit
+ without a soul or magical powers, which will be under your direct 
+control. Req. Anthromorphing, Body Control.</td>
+		<td class="lifeval_col">-2</td>
+		<td class="powerval_col">-2</td>
+		<td class="skillval_col">-1</td>
+		<td class="powerreq_col">38</td>
+	</tr>
+</tbody></table>
+<table id="i4d_ressurection" onclick="toggle('i4d_ressurection',0, true, 'i4d_anthromorphing','i4f_soultrapping')">
+	<tbody><tr>
+		<td class="name_col">Ressurection</td>
+		<td class="desc_col">You can raise the living from the dead and 
+breathe life back into them, making them whole and alive again. (Req. 
+Anthromorphing, Soul Trapping). </td>
+		<td class="lifeval_col">-4</td>
+		<td class="powerval_col">-1</td>
+		<td class="skillval_col">-1</td>
+		<td class="powerreq_col">39</td>
+	</tr>
+</tbody></table>
+<br>
+<table id="i4d_corporealalteration" onclick="toggle('i4d_corporealalteration',0, true, null,null)">
+	<tbody><tr>
+		<td class="name_col">Corporeal Alteration</td>
+		<td class="desc_col">You can temporarily alter the behavior and 
+quality of the bodies of the living, making them more fragile or tough, 
+weak or strong, shaky or graceful, slower or faster.</td>
+		<td class="skillval_col">-5</td>
+		<td class="powerreq_col">6</td>
+	</tr>
+</tbody></table>
+<hr class="no_hr">
+<br>
+</div>
+
+<hr>
+<h1 onclick="slidePanel('psychic')">Psychic Abilities</h1>
+<div id="psychic" class="infocus">
+<p class="narration">
+Does your character possess the ability to change peoples' minds?<br>
+</p>
+<table id="i4e_mentalalteration1" onclick="toggle('i4e_mentalalteration1',0, true, null,null, 'i4e_mentalalteration2')">
+	<tbody><tr>
+		<td class="name_col">Mental Alteration I</td>
+		<td class="desc_col">You can temporarily alter others' state of minds,
+ making them groggy or asleep, anxious or terrified, drunken or 
+confused, dazed or berserk, awed or fascinated.</td>
+		<td class="skillval_col">-6</td>
+		<td class="powerreq_col">3</td>
+	</tr>
+</tbody></table>
+<table id="i4e_mentalalteration2" onclick="toggle('i4e_mentalalteration2',0, true, 'i4e_mentalalteration1',null, 'i4e_mentalalteration3','i4e_mindcontrol')">
+	<tbody><tr>
+		<td class="name_col">Mental Alteration II</td>
+		<td class="desc_col">You can cause lasting damage to others' minds, 
+such as making them forget or hallucinate, render them mute, retarded or
+ insane, give them battle-fright or nightmares. Req. Mental Alteration I.</td>
+		<td class="skillval_col">-3</td>
+		<td class="powerreq_col">11</td>
+	</tr>
+</tbody></table>
+<table id="i4e_mentalalteration3" onclick="toggle('i4e_mentalalteration3',0, true, 'i4e_mentalalteration2',null)">
+	<tbody><tr>
+		<td class="name_col">Mental Alteration III</td>
+		<td class="desc_col">You have precise control over others' minds so as
+ to plant false memories, selectively remove them, grant basic knowledge
+ of skills, or change their personalities. Req. Mental Alteration II.</td>
+		<td class="lifeval_col">-3</td>
+		<td class="skillval_col">-3</td>
+		<td class="powerreq_col">19</td>
+	</tr>
+</tbody></table>
+<table id="i4e_mindcontrol" onclick="toggle('i4e_mindcontrol',0, true, 'i4e_mentalalteration2',null)">
+	<tbody><tr>
+		<td class="name_col">Mind Control</td>
+		<td class="desc_col">You can utterly control others' minds, so that 
+they become your loyal servants without realizing it. You can only 
+control a few individuals at a time. Req. Mental Alteration II.</td>
+		<td class="powerval_col">-6</td>
+		<td class="skillval_col">-6</td>
+		<td class="powerreq_col">36</td>
+	</tr>
+</tbody></table>
+<br>
+<table id="i4e_telepathy" onclick="toggle('i4e_telepathy',0, true, null,null, 'i4e_mindreading')">
+	<tbody><tr>
+		<td class="name_col">Telepathy</td>
+		<td class="desc_col">You can communicate telepathically with anyone 
+you choose, and they will be able to respond telepathically even if they
+ don't also have this ability. </td>
+		<td class="skillval_col">-4</td>
+		<td class="powerreq_col">7</td>
+	</tr>
+</tbody></table>
+<table id="i4e_mindreading" onclick="toggle('i4e_mindreading',0, true, 'i4e_telepathy',null, 'i4e_knowledgestealing', 'i5a_stolentreasure')">
+	<tbody><tr>
+		<td class="name_col">Mind Reading</td>
+		<td class="desc_col">You can read the minds of those you are near. 
+Only who have practicing blocking off their minds from intruders can 
+keep their secrets. Req. Telepathy.</td>
+		<td class="skillval_col">-3</td>
+		<td class="powerreq_col">17</td>
+	</tr>
+</tbody></table>
+<table id="i4e_knowledgestealing" onclick="toggle('i4e_knowledgestealing',0, true, 'i4e_mindreading',null)">
+	<tbody><tr>
+		<td class="name_col">Knowledge Stealing</td>
+		<td class="desc_col">You can place your hand on someone's head and 
+rapidly steal knowledge and skills directly out of their minds. This 
+knowledge comes instinctively to you. Req. Mind Reading.</td>
+		<td class="skillval_col">-2</td>
+		<td class="powerreq_col">27</td>
+	</tr>
+</tbody></table>
+<hr class="no_hr">
+<br>
+</div>
+
+<hr>
+<h1 onclick="slidePanel('spiritual')">Spiritual Abilities</h1>
+<div id="spiritual" class="infocus">
+<p class="narration">
+Does your character possess powers over the soul?<br>
+</p>
+<table id="i4f_soultrapping" onclick="toggle('i4f_soultrapping',0, true, null,null, 'i4d_ressurection','i4f_soulbinding', 'i5a_soulentrapment')">
+	<tbody><tr>
+		<td class="name_col">Soul Trapping</td>
+		<td class="desc_col">You can empower your weapons to trap the souls of
+ those whose flesh are struck by the weapon. Souls can then be stored in
+ magicite and used to empower your future spells.</td>
+		<td class="powerval_col">3</td>
+		<td class="skillval_col">-2</td>
+		<td class="powerreq_col">9</td>
+	</tr>
+</tbody></table>
+<table id="i4f_soulbinding" onclick="toggle('i4f_soulbinding',0, true, 'i4f_soultrapping',null)">
+	<tbody><tr>
+		<td class="name_col">Soul Binding</td>
+		<td class="desc_col">You can break the spirit of your trapped souls 
+and bind them to your will. Thus bound, your created minions can act 
+independently and even cast spells. Req. Soul Trapping.</td>
+		<td class="skillval_col">-2</td>
+		<td class="powerreq_col">15</td>
+	</tr>
+</tbody></table>
+<table id="i4f_soultransference" onclick="toggle('i4f_soultransference',0, true, null,null, 'i4f_soulpossession')">
+	<tbody><tr>
+		<td class="name_col">Soul Transference</td>
+		<td class="desc_col">Your soul is capable of leaving your body and 
+settling into that of another, though only if that other body doesn't 
+have a soul or is dead. Thereafter it becomes your new body.</td>
+		<td class="skillval_col">-2</td>
+		<td class="powerreq_col">27</td>
+	</tr>
+</tbody></table>
+<table id="i4f_soulpossession" onclick="toggle('i4f_soulpossession',0, true, 'i4f_soultransference',null)">
+	<tbody><tr>
+		<td class="name_col">Soul Possession</td>
+		<td class="desc_col">Your soul is able to forcibly take control over 
+the body of another, imprisoning the host's own soul within its own body
+ until you decide to leave the host. Req. Soul Transference.</td>
+		<td class="skillval_col">-2</td>
+		<td class="powerreq_col">39</td>
+	</tr>
+</tbody></table>
+<table id="i4f_soulkilling" onclick="toggle('i4f_soulkilling',0, true, null,null)">
+	<tbody><tr>
+		<td class="name_col">Soul Killing</td>
+		<td class="desc_col">You are an avatar of death. You can kill peoples'
+ souls merely by pointing a finger, channel rays of death, and kill or 
+strike comatose all nearby with a single utterance.</td>
+		<td class="skillval_col">-2</td>
+		<td class="powerreq_col">51</td>
+	</tr>
+</tbody></table>
+<hr class="no_hr">
+<br>
+</div>
+
+<hr>
+<h1 onclick="slidePanel('illusion')">Illusion Abilities</h1>
+<div id="illusion" class="infocus">
+<p class="narration">
+Does your character have the ability to create sound and silence, light and darkness?<br>
+</p>
+<table id="i4g_voiceamplification" onclick="toggle('i4g_voiceamplification',0, true, null,null)">
+	<tbody><tr>
+		<td class="name_col">Voice Amplification</td>
+		<td class="desc_col">You can greatly amplify your voice, allowing you to be heard from a great distance or even to send the weak-willed into a panic.</td>
+		<td class="skillval_col">-1</td>
+		<td class="powerreq_col">3</td>
+	</tr>
+</tbody></table>
+<table id="i4g_voicealteration" onclick="toggle('i4g_voicealteration',0, true, null,null)">
+	<tbody><tr>
+		<td class="name_col">Voice Alteration</td>
+		<td class="desc_col">You can change your voice to sound like someone else's, such that listeners wouldn't be able to tell the difference.</td>
+		<td class="skillval_col">-3</td>
+		<td class="powerreq_col">1</td>
+	</tr>
+</tbody></table>
+<table id="i4g_voicesilencing" onclick="toggle('i4g_voicesilencing',0, true, null,null, 'i4g_silencing')">
+	<tbody><tr>
+		<td class="name_col">Voice Silencing</td>
+		<td class="desc_col">You can silence the vocal sounds of any person 
+within a short distance from you. This can prevent the person from using
+ spells requiring incantations.</td>
+		<td class="skillval_col">-1</td>
+		<td class="powerreq_col">2</td>
+	</tr>
+</tbody></table>
+<table id="i4g_silencing" onclick="toggle('i4g_silencing',0, true, 'i4g_voicesilencing',null)">
+	<tbody><tr>
+		<td class="name_col">Silencing</td>
+		<td class="desc_col">You can silence all sound coming from a small area, allowing you and allies to sneak without being heard. Req. Voice Silencing.</td>
+		<td class="skillval_col">-2</td>
+		<td class="powerreq_col">2</td>
+	</tr>
+</tbody></table>
+<table id="i4g_soundcasting" onclick="toggle('i4g_soundcasting',0, true, null,null, 'i4g_voicecasting')">
+	<tbody><tr>
+		<td class="name_col">Sound Casting</td>
+		<td class="desc_col">You can create convincing, phantom sounds that 
+seem to come from any location within a short distance from your current
+ location. </td>
+		<td class="skillval_col">-3</td>
+		<td class="powerreq_col">6</td>
+	</tr>
+</tbody></table>
+<table id="i4g_voicecasting" onclick="toggle('i4g_voicecasting',0, true, 'i4g_soundcasting',null)">
+	<tbody><tr>
+		<td class="name_col">Voice Casting</td>
+		<td class="desc_col">You can have your voice seem to come from any 
+location within a short distance from your current location. Can combine
+ with Voice Alteration. Req. Sound Casting.</td>
+		<td class="skillval_col">-2</td>
+		<td class="powerreq_col">7</td>
+	</tr>
+</tbody></table>
+<br>
+<table id="i4g_lightcasting1" onclick="toggle('i4g_lightcasting1',0, true, null,null, 'i4g_lightcasting2')">
+	<tbody><tr>
+		<td class="name_col">Light Casting I</td>
+		<td class="desc_col">You can create ambient light or defined light 
+sources (ie. orbs of light) of any color, and you can have them 
+accompany you, leave them in place, or move them with a thought.</td>
+		<td class="skillval_col">-3</td>
+		<td class="powerreq_col">7</td>
+	</tr>
+</tbody></table>
+<table id="i4g_lightcasting2" onclick="toggle('i4g_lightcasting2',0, true, 'i4g_lightcasting1',null)">
+	<tbody><tr>
+		<td class="name_col">Light Casting II</td>
+		<td class="desc_col">You can create powerful light sources (ie. flares) and can create momentarily blinding flashes of light. Req. Light Casting I.</td>
+		<td class="skillval_col">-1</td>
+		<td class="powerreq_col">13</td>
+	</tr>
+</tbody></table>
+<table id="i4g_darkcasting1" onclick="toggle('i4g_darkcasting1',0, true, null,null, 'i4g_darkcasting2')">
+	<tbody><tr>
+		<td class="name_col">Dark Casting I</td>
+		<td class="desc_col">You can create ambient dimness or defined areas 
+of darkness (ie. shadows), and you can have them accompany you, leave 
+them in place, or move them with a thought.</td>
+		<td class="skillval_col">-2</td>
+		<td class="powerreq_col">9</td>
+	</tr>
+</tbody></table>
+<table id="i4g_darkcasting2" onclick="toggle('i4g_darkcasting2',0, true, 'i4g_darkcasting1',null)">
+	<tbody><tr>
+		<td class="name_col">Dark Casting II</td>
+		<td class="desc_col">You can create a localized spheres of pitch darkness, where even magical light cannot penetrate. Req. Dark Casting I.</td>
+		<td class="skillval_col">-1</td>
+		<td class="powerreq_col">15</td>
+	</tr>
+</tbody></table>
+<br>
+<table id="i4g_camouflage" onclick="toggle('i4g_camouflage',0, true, null,null, 'i4g_personalinvisibility')">
+	<tbody><tr>
+		<td class="name_col">Camouflage</td>
+		<td class="desc_col">You can camouflage yourself (but not your clothes
+ or items) at will. The camouflage is not perfect and can be spotted if 
+you get too close to someone attentive.</td>
+		<td class="skillval_col">-2</td>
+		<td class="powerreq_col">7</td>
+	</tr>
+</tbody></table>
+<table id="i4g_personalinvisibility" onclick="toggle('i4g_personalinvisibility',0, true, 'i4g_camouflage',null, 'i4g_massinvisibility')">
+	<tbody><tr>
+		<td class="name_col">Personal Invisibility</td>
+		<td class="desc_col">You can turn yourself (but not your clothes or 
+items) invisible at will. To be invisible you would have to remove your 
+clothing, armor and weapons. Req. Personal Camouflage.</td>
+		<td class="skillval_col">-3</td>
+		<td class="powerreq_col">15</td>
+	</tr>
+</tbody></table>
+<table id="i4g_objectinvisibility" onclick="toggle('i4g_objectinvisibility',0, true, null,null, 'i4g_massinvisibility')">
+	<tbody><tr>
+		<td class="name_col">Object Invisibility</td>
+		<td class="desc_col">You can turn inanimate objects invisible (such as
+ for smuggling or looking through walls). You'll need this if you want 
+to be invisible while wearing clothes or carrying items.</td>
+		<td class="skillval_col">-6</td>
+		<td class="powerreq_col">11</td>
+	</tr>
+</tbody></table>
+<table id="i4g_massinvisibility" onclick="toggle('i4g_massinvisibility',0, true, 'i4g_personalinvisibility','i4g_objectinvisibility')">
+	<tbody><tr>
+		<td class="name_col">Mass Invisibility</td>
+		<td class="desc_col">You can project your invisibility effect over a 
+sphere centered on you; you can turn anything within it (incl. tents) 
+invisible. Req. Personal Invisibility, Object Invisibility.</td>
+		<td class="skillval_col">-1</td>
+		<td class="powerreq_col">23</td>
+	</tr>
+</tbody></table>
+<br>
+<table id="i4g_illusion1" onclick="toggle('i4g_illusion1',0, true, null,null, 'i4g_illusion2','i4g_complexillusion','i4g_animatedillusion','i4g_blurredimage')">
+	<tbody><tr>
+		<td class="name_col">Illusion I</td>
+		<td class="desc_col">You can create an inanimate illusion of an 
+object, but not a creature. You can create multiple illusions 
+simultaneously but the allowed total surface area is small.</td>
+		<td class="skillval_col">-6</td>
+		<td class="powerreq_col">10</td>
+	</tr>
+</tbody></table>
+<table id="i4g_illusion2" onclick="toggle('i4g_illusion2',0, true, 'i4g_illusion1',null)">
+	<tbody><tr>
+		<td class="name_col">Illusion II</td>
+		<td class="desc_col">You can create illusions with a much larger total
+ surface area, enough to cover an entire building, a sizable patch of 
+ground, or a sizable group of creatures. Req. Illusion I.</td>
+		<td class="skillval_col">-1</td>
+		<td class="powerreq_col">18</td>
+	</tr>
+</tbody></table>
+<table id="i4g_complexillusion" onclick="toggle('i4g_complexillusion',0, true, 'i4g_illusion1',null)">
+	<tbody><tr>
+		<td class="name_col">Complex Illusion</td>
+		<td class="desc_col">You can create illusions of creatures. You'll need Animated Illusion to animate them. Req. Illusion I. </td>
+		<td class="skillval_col">-2</td>
+		<td class="powerreq_col">13</td>
+	</tr>
+</tbody></table>
+<table id="i4g_animatedillusion" onclick="toggle('i4g_animatedillusion',0, true, 'i4g_illusion1',null, 'i5a_nobleimpersonation')">
+	<tbody><tr>
+		<td class="name_col">Animated Illusion</td>
+		<td class="desc_col">You can create animated illusions of objects, and
+ creatures (with Complex Illusion). Req. Illusion I. Combine with Voice 
+Casting to add sound to match the illusion. </td>
+		<td class="powerval_col">-2</td>
+		<td class="skillval_col">-1</td>
+		<td class="powerreq_col">15</td>
+	</tr>
+</tbody></table>
+<table id="i4g_blurredimage" onclick="toggle('i4g_blurredimage',0, true, 'i4g_illusion1',null)">
+	<tbody><tr>
+		<td class="name_col">Blurred Image</td>
+		<td class="desc_col">You can blur your image and weave misleading 
+afterimages all around you, confounding enemies as to where you'll move 
+or strike next. Req. Illusion I.</td>
+		<td class="skillval_col">-2</td>
+		<td class="powerreq_col">11</td>
+	</tr>
+</tbody></table>
+<hr class="no_hr">
+<br>
+</div>
+
+<hr>
+<h1 onclick="slidePanel('temporal')">Temporal Abilities</h1>
+<div id="temporal" class="infocus">
+<p class="narration">
+Does your character have the ability to manipulate time?<br>
+</p>
+<table id="i4h_temporalalteration1" onclick="toggle('i4h_temporalalteration1',0, true, null,null, 'i4h_temporalalteration2')">
+	<tbody><tr>
+		<td class="name_col">Temporal Alteration I</td>
+		<td class="desc_col">You can control the flow of time, speeding up or 
+slowing down movement and ongoing effects within temporal bubbles of 
+your making at locations of your choosing.</td>
+		<td class="skillval_col">-3</td>
+		<td class="powerreq_col">9</td>
+	</tr>
+</tbody></table>
+<table id="i4h_temporalalteration2" onclick="toggle('i4h_temporalalteration2',0, true, 'i4h_temporalalteration1',null)">
+	<tbody><tr>
+		<td class="name_col">Temporal Alteration II</td>
+		<td class="desc_col">Your power to manipulate time allows you to lock 
+all matter and time in an area in utter stasis, affecting all except 
+you, allowing you to perform actions instantly. Req. Temporal Alteration I.</td>
+		<td class="skillval_col">-2</td>
+		<td class="powerreq_col">81</td>
+	</tr>
+</tbody></table>
+<hr class="no_hr">
+<br>
+</div>
+
+<hr>
+<h1 onclick="slidePanel('conjuration')">Conjuration Abilities</h1>
+<div id="conjuration" class="infocus">
+<p class="narration">
+Does your character have the ability to conjure things out of thin air?<br>
+</p>
+<table id="i4i_foodconjuration" onclick="toggle('i4i_foodconjuration',0, true, null,null)">
+	<tbody><tr>
+		<td class="name_col">Food Conjuration</td>
+		<td class="desc_col">You are able to conjure food out of thin air, 
+allowing you and your companions to travel long term in inhospitable 
+wilderness without worrying about starvation.</td>
+		<td class="skillval_col">-3</td>
+		<td class="powerreq_col">7</td>
+	</tr>
+</tbody></table>
+<br>
+<table id="i4i_etherealconjuration" onclick="toggle('i4i_etherealconjuration',0, true, null,null, 'i4i_etherealanimation')">
+	<tbody><tr>
+		<td class="name_col">Ethereal Conjuration</td>
+		<td class="desc_col">You are able to conjure translucent phantoms that
+ can readily pass through material objects, yet can be solid and hold, 
+move or block material objects upon command.</td>
+		<td class="skillval_col">-3</td>
+		<td class="powerreq_col">16</td>
+	</tr>
+</tbody></table>
+<table id="i4i_etherealanimation" onclick="toggle('i4i_etherealanimation',0, true, 'i4i_etherealconjuration',null)">
+	<tbody><tr>
+		<td class="name_col">Ethereal Animation</td>
+		<td class="desc_col">You can create ethereal phantoms to fight for 
+you. Weapons and projectiles will pass through them to no effect, while 
+their blows will strike true. Req. Ethereal Conjuration.</td>
+		<td class="powerval_col">-2</td>
+		<td class="skillval_col">-1</td>
+		<td class="powerreq_col">20</td>
+	</tr>
+</tbody></table>
+<br>
+<table id="i4i_objectconjuration" onclick="toggle('i4i_objectconjuration',0, true, null,null)">
+	<tbody><tr>
+		<td class="name_col">Object Conjuration</td>
+		<td class="desc_col">You can, with much time and effort, conjure or 
+vanish inanimate, inorganic objects out of thin air, such as silverware 
+or furniture, weapons or clothing, jewelry or stationery.</td>
+		<td class="skillval_col">-12</td>
+		<td class="powerreq_col">12</td>
+	</tr>
+</tbody></table>
+<hr class="no_hr">
+<br>
+</div>
+
+<hr>
+<h1 onclick="slidePanel('transmutationability')">Transmutation Abilities</h1>
+<div id="transmutationability" class="infocus">
+<p class="narration">
+Does your character have the ability to transmute matter or transform itself?<br>
+</p>
+<table id="i4j_elementskin">
+	<tbody><tr onclick="toggle('i4j_elementskin',0, true, null,null)">
+		<td class="name_col">Barkskin</td>
+		<td class="desc_col">Your skin is as bark, stiff and flaky and easily 
+combustible but hardy against physical blows and resilient against the 
+elements.</td>
+		<td class="powerval_col">-2</td>
+		<td class="skillval_col">-1</td>
+		<td class="powerreq_col">4</td>
+	</tr>
+	<tr onclick="toggle('i4j_elementskin',1, true, null,null)">
+		<td class="name_col">Stoneskin</td>
+		<td class="desc_col">Your skin is as stone, heavy and rigid and very 
+hard, but is liable to crack when struck with a well delivered blow from
+ a mighty opponent.</td>
+		<td class="powerval_col">-4</td>
+		<td class="skillval_col">-1</td>
+		<td class="powerreq_col">8</td>
+	</tr>
+	<tr onclick="toggle('i4j_elementskin',2, true, null,null)">
+		<td class="name_col">Ironskin</td>
+		<td class="desc_col">Your skin is as metal, insanely hard for its 
+weight and resistant against all physical attack, but offers poor 
+insulation from the elements.</td>
+		<td class="powerval_col">-6</td>
+		<td class="skillval_col">-1</td>
+		<td class="powerreq_col">12</td>
+	</tr>
+</tbody></table>
+<br>
+<table id="i4j_elementform">
+	<tbody><tr onclick="toggle('i4j_elementform',0, true, null,null)">
+		<td class="name_col">Shadowform</td>
+		<td class="desc_col">Your body can meld into a two-dimensional shadow,
+ utterly unblockable and untargetable yet vulnerable only to light; and 
+reform out from the shadows at any time.</td>
+		<td class="powerval_col">-6</td>
+		<td class="skillval_col">-3</td>
+		<td class="powerreq_col">16</td>
+	</tr>
+	<tr onclick="toggle('i4j_elementform',1, true, null,null)">
+		<td class="name_col">Waterform</td>
+		<td class="desc_col">Your body reduces to living water instead of 
+being injured from physical attack; and you can then rapidly reform your
+ body; or you can just do this whenever you'd like.</td>
+		<td class="powerval_col">-7</td>
+		<td class="skillval_col">-2</td>
+		<td class="powerreq_col">19</td>
+	</tr>
+	<tr onclick="toggle('i4j_elementform',2, true, null,null)">
+		<td class="name_col">Flameform</td>
+		<td class="desc_col">Your body reduces to living flame instead of 
+being injured from physical attack; and you can then rapidly reform your
+ body; or you can just do this whenever you'd like.</td>
+		<td class="powerval_col">-8</td>
+		<td class="skillval_col">-2</td>
+		<td class="powerreq_col">21</td>
+	</tr>
+	<tr onclick="toggle('i4j_elementform',3, true, null,null)">
+		<td class="name_col">Earthform</td>
+		<td class="desc_col">Your body reduces to earth or sand instead of 
+being injured from physical attack; and you can then rapidly reform your
+ body; or you can just do this whenever you'd like.</td>
+		<td class="powerval_col">-8</td>
+		<td class="skillval_col">-4</td>
+		<td class="powerreq_col">23</td>
+	</tr>
+	<tr onclick="toggle('i4j_elementform',4, true, null,null)">
+		<td class="name_col">Mistform</td>
+		<td class="desc_col">Your body reduces to living mist instead of being
+ injured from physical attack; and you can then rapidly reform your 
+body; or you can just do this whenever you'd like.</td>
+		<td class="powerval_col">-10</td>
+		<td class="skillval_col">-2</td>
+		<td class="powerreq_col">17</td>
+	</tr>
+</tbody></table>
+<br>
+<table id="i4j_transmutation" onclick="toggle('i4j_transmutation',0, true, null,null, 'i5a_alchemy')">
+	<tbody><tr>
+		<td class="name_col">Transmutation</td>
+		<td class="desc_col">You can change matter from one form to another; 
+you can liquefy, vaporize, petrify, etc. anything at will. Of course, if
+ this was a living being it'll now be dead.</td>
+		<td class="skillval_col">-24</td>
+		<td class="powerreq_col">16</td>
+	</tr>
+</tbody></table>
+<hr class="no_hr">
+<br>
+</div>
+
+<hr>
+<h1 onclick="slidePanel('transformationability')">Transformation Abilities</h1>
+<div id="transformationability" class="infocus">
+<p class="narration">
+Does your character have the ability to transform?<br>
+</p>
+<table id="i4k_wings">
+	<tbody><tr onclick="toggle('i4k_wings',0, true, null,null)">
+		<td class="name_col">Angelic Wings</td>
+		<td class="desc_col">You are born with either feathered wings or 
+butterfly wings, and can use them to fly. They are very vulnerable and 
+sensitive however, and if lost will not regrow.</td>
+		<td class="lifeval_col">-2</td>
+		<td class="skillval_col">-1</td>
+		<td class="powerreq_col">9</td>
+	</tr>
+	<tr onclick="toggle('i4k_wings',1, true, null,null)">
+		<td class="name_col">Demonic Wings</td>
+		<td class="desc_col">You are born with leathery or scaly demonic wings
+ tipped with talons, and can use them to fly. They are resistant to 
+damage and even if they are torn, you can grow them back.</td>
+		<td class="lifeval_col">-3</td>
+		<td class="skillval_col">-1</td>
+		<td class="powerreq_col">6</td>
+	</tr>
+	<tr onclick="toggle('i4k_wings',2, true, null,null)">
+		<td class="name_col">Ethereal Wings</td>
+		<td class="desc_col">You can emanate wings of pure ether or strands of
+ light, and can use them to fly. They are otherwise intangible and thus 
+invulnerable to attack and are usable in close quarters.</td>
+		<td class="lifeval_col">-</td>
+		<td class="skillval_col">-3</td>
+		<td class="powerreq_col">13</td>
+	</tr>
+</tbody></table>
+<br>
+<table id="i4k_shapeshifting1" onclick="toggle('i4k_shapeshifting1',0, true, null,null, 'i4k_shapeshifting2')">
+	<tbody><tr>
+		<td class="name_col">Shapeshifting I</td>
+		<td class="desc_col">You are able to transform into the form of 
+another animal, whilst still keeping your intellect, ability to speak, 
+and spellcasting ability. That form is determined at birth.</td>
+		<td class="lifeval_col">-3</td>
+		<td class="skillval_col">-2</td>
+		<td class="powerreq_col">8</td>
+	</tr>
+</tbody></table>
+<table id="i4k_shapeshifting2" onclick="toggle('i4k_shapeshifting2',0, true, 'i4k_shapeshifting1',null)">
+	<tbody><tr>
+		<td class="name_col">Shapeshifting II</td>
+		<td class="desc_col">You are able to transform into the form of other 
+animals, without any limit on which animals you can turn into, and can 
+change from one form to another easily. Req. Shapeshifting I.</td>
+		<td class="lifeval_col">-1</td>
+		<td class="skillval_col">-7</td>
+		<td class="powerreq_col">8</td>
+	</tr>
+</tbody></table>
+<hr class="no_hr">
+<br>
+</div>
+
+<hr>
+<h1 onclick="slidePanel('vorpal')">Vorpal Abilities</h1>
+<div id="vorpal" class="infocus">
+<p class="narration">
+Does your character have the ability to teleport or manipulate reality?<br>
+</p>
+<table id="i4l_teleportation1" onclick="toggle('i4l_teleportation1',0, true, null,null, 'i4l_teleportation2','i4l_objectteleportation')">
+	<tbody><tr>
+		<td class="name_col">Teleportation I</td>
+		<td class="desc_col">You can teleport your body - and only your body -
+ a good distance at will, however you'll need rest thereafter. You'll 
+need to know if there's room there or you might splice yourself.</td>
+		<td class="skillval_col">-3</td>
+		<td class="powerreq_col">14</td>
+	</tr>
+</tbody></table>
+<table id="i4l_teleportation2" onclick="toggle('i4l_teleportation2',0, true, 'i4l_teleportation1',null)">
+	<tbody><tr>
+		<td class="name_col">Teleportation II</td>
+		<td class="desc_col">You can teleport more often and across greater distances, allowing you to travel thousands of miles in mere hours. Req. Teleportation I.</td>
+		<td class="skillval_col">-1</td>
+		<td class="powerreq_col">26</td>
+	</tr>
+</tbody></table>
+<table id="i4l_objectteleportation" onclick="toggle('i4l_objectteleportation',0, true, 'i4l_teleportation1',null, 'i4l_massteleportation')">
+	<tbody><tr>
+		<td class="name_col">Object Teleportation</td>
+		<td class="desc_col">You can teleport objects near you (ie. right into
+ enemies' guts); this allows you to bring clothing and items along. 
+Teleporting larger objects is more draining. Req. Teleportation I.</td>
+		<td class="skillval_col">-8</td>
+		<td class="powerreq_col">11</td>
+	</tr>
+</tbody></table>
+<table id="i4l_massteleportation" onclick="toggle('i4l_massteleportation',0, true, 'i4l_teleportation1','i4l_objectteleportation', 'i4l_massrecall','i4l_planartravel')">
+	<tbody><tr>
+		<td class="name_col">Mass Teleportation</td>
+		<td class="desc_col">You can teleport anything or anyone of your 
+choice that's near you all at once, including companions or enemies, 
+where you want. Req. Teleportation I, Object Teleportation.</td>
+		<td class="skillval_col">-2</td>
+		<td class="powerreq_col">37</td>
+	</tr>
+</tbody></table>
+<table id="i4l_massrecall" onclick="toggle('i4l_massrecall',0, true, 'i4l_massteleportation',null)">
+	<tbody><tr>
+		<td class="name_col">Mass Recall</td>
+		<td class="desc_col">You can teleport anything you've previously 
+applied an arcane mark to, to somewhere of your choosing near your 
+current location. Req. Mass Teleportation.</td>
+		<td class="skillval_col">-1</td>
+		<td class="powerreq_col">41</td>
+	</tr>
+</tbody></table>
+<table id="i4l_planartravel" onclick="toggle('i4l_planartravel',0, true, 'i4l_massteleportation',null)">
+	<tbody><tr>
+		<td class="name_col">Planar Travel</td>
+		<td class="desc_col">You and any who accompany you can travel the 
+planes, returning from Hell when damned or from the Void when banished. 
+Req. Mass Teleportation.</td>
+		<td class="skillval_col">-2</td>
+		<td class="powerreq_col">43</td>
+	</tr>
+</tbody></table>
+<br>
+<table id="i4l_banishment" onclick="toggle('i4l_banishment',0, true, null,null)">
+	<tbody><tr>
+		<td class="name_col">Banishment</td>
+		<td class="desc_col">You can banish whomever or whatever you want and 
+it will disappear from the plane of reality, leaving it trapped in the 
+middle of the Void for a very long time.</td>
+		<td class="skillval_col">-6</td>
+		<td class="powerreq_col">9</td>
+	</tr>
+</tbody></table>
+<table id="i4l_realitytearing" onclick="toggle('i4l_realitytearing',0, true, null,null)">
+	<tbody><tr>
+		<td class="name_col">Reality Tearing</td>
+		<td class="desc_col">You can slice through the dimensions and rupture 
+the very fabric of reality, absolutely dismembering or shattering 
+whatever was there. Even reality can't recover from this.</td>
+		<td class="skillval_col">-2</td>
+		<td class="powerreq_col">38</td>
+	</tr>
+</tbody></table>
+<table id="i4l_damnation" onclick="toggle('i4l_damnation',0, true, null,null, 'i5a_hellsending')">
+	<tbody><tr>
+		<td class="name_col">Damnation</td>
+		<td class="desc_col">You can damn your victims, sending them straight 
+to Hell. The demons of Hell relish these gifts and will reward your 
+damnation of others with gifts of magical might.</td>
+		<td class="skillval_col">-2</td>
+		<td class="powerreq_col">26</td>
+	</tr>
+</tbody></table>
+<table id="i4l_annihilation" onclick="toggle('i4l_annihilation',0, true, null,null)">
+	<tbody><tr>
+		<td class="name_col">Annihilation</td>
+		<td class="desc_col">You can annihilate all things in an area, utterly
+ annihilating anything there. They aren't sent to the Void; they just 
+cease to be, for the rest of eternity. </td>
+		<td class="skillval_col">-2</td>
+		<td class="powerreq_col">44</td>
+	</tr>
+</tbody></table>
+<hr class="no_hr">
+<br>
+</div>
+
+<hr>
+<h1 onclick="slidePanel('resistance')">Resistance Abilities</h1>
+<div id="resistance" class="infocus">
+<p class="narration">
+Does your character have the ability to resist the elements or shield against physical attack?<br>
+</p>
+<table id="i4m_unmovability" onclick="toggle('i4m_unmovability',0, true, null,null)">
+	<tbody><tr>
+		<td class="name_col">Unmovability</td>
+		<td class="desc_col">You are able to stand your ground against powerful gusts, waves of water, barrages, physical collision, and telekinetic spells.</td>
+		<td class="skillval_col">-1</td>
+	</tr>
+</tbody></table>
+<table id="i4m_resilience" onclick="toggle('i4m_resilience',0, true, null,null)">
+	<tbody><tr>
+		<td class="name_col">Resilience</td>
+		<td class="desc_col">You are resilient to pain, torment, and anguish, 
+allowing you to continue to fight long after ordinary men would have 
+fallen clutching their wounds, and resist torture.</td>
+		<td class="lifeval_col">-1</td>
+	</tr>
+</tbody></table>
+<table id="i4m_antivenom" onclick="toggle('i4m_antivenom',0, true, null,null)">
+	<tbody><tr>
+		<td class="name_col">Antivenom</td>
+		<td class="desc_col">Your blood courses with antivenoms that rapidly 
+neutralize any poison or corrosive acids that might have made contact 
+with your body, rendering you nigh immune to them. </td>
+		<td class="lifeval_col">-1</td>
+	</tr>
+</tbody></table>
+<table id="i4m_waterbreathing" onclick="toggle('i4m_waterbreathing',0, true, null,null)">
+	<tbody><tr>
+		<td class="name_col">Water Breathing</td>
+		<td class="desc_col">You are able to breathe while underwater and do so just as easily as if you were standing on dry land. </td>
+		<td class="skillval_col">-1</td>
+	</tr>
+</tbody></table>
+<table id="i4m_mindblock" onclick="toggle('i4m_mindblock',0, true, null,null)">
+	<tbody><tr>
+		<td class="name_col">Mind Block</td>
+		<td class="desc_col">Your mind is as a fortress - impervious to the 
+prying of mind readers and psychics -  allowing you to keep your 
+thoughts secret and protecting your mind from mental attack.</td>
+		<td class="powerval_col">-1</td>
+		<td class="skillval_col">-1</td>
+	</tr>
+</tbody></table>
+<table id="i4m_elementalresistance" onclick="toggle('i4m_elementalresistance',0, true, null,null)">
+	<tbody><tr>
+		<td class="name_col">Elemental Resistance</td>
+		<td class="desc_col">Your body proves resistant to the elements. You 
+can walk through fire and frost, and absorb lightning, without becoming 
+any the worse for wear.</td>
+		<td class="lifeval_col">-4</td>
+	</tr>
+</tbody></table>
+<table id="i4m_barrier1" onclick="toggle('i4m_barrier1',0, true, null,null, 'i4m_barrier2')">
+	<tbody><tr>
+		<td class="name_col">Barrier I</td>
+		<td class="desc_col">You can project a translucent ovaloid personal 
+shield to ward against the brunt of physical blows, spells, and 
+elemental effects that would otherwise affect you.</td>
+		<td class="powerval_col">-1</td>
+		<td class="skillval_col">-2</td>
+		<td class="powerreq_col">8</td>
+	</tr>
+</tbody></table>
+<table id="i4m_barrier2" onclick="toggle('i4m_barrier2',0, true, 'i4m_barrier1',null, 'i4m_barrier3')">
+	<tbody><tr>
+		<td class="name_col">Barrier II</td>
+		<td class="desc_col">You can project your personal shield as a sizable
+ spherical shield under which your allies may huddle, protecting them 
+against attack and warding off enemies. Req. Barrier I.</td>
+		<td class="powerval_col">-2</td>
+		<td class="skillval_col">-2</td>
+		<td class="powerreq_col">14</td>
+	</tr>
+</tbody></table>
+<table id="i4m_barrier3" onclick="toggle('i4m_barrier3',0, true, 'i4m_barrier2',null)">
+	<tbody><tr>
+		<td class="name_col">Barrier III</td>
+		<td class="desc_col">You can project barriers - spherical or any other
+ shape - to absorb attacks and spells and obstruct movement, allowing 
+you to erect force prisons and force walls. Req. Barrier II.</td>
+		<td class="powerval_col">-3</td>
+		<td class="skillval_col">-3</td>
+		<td class="powerreq_col">22</td>
+	</tr>
+</tbody></table>
+<table id="i4m_hardenedskin" onclick="toggle('i4m_hardenedskin',0, true, null,null, 'i4m_indestructibility')">
+	<tbody><tr>
+		<td class="name_col">Hardened Skin</td>
+		<td class="desc_col">Your skin is unnaturally hardened so that 
+glancing blows and strikes from lighter weapons will barely scratch the 
+surface, though more powerful blows will still penetrate.</td>
+		<td class="powerval_col">-2</td>
+		<td class="skillval_col">-2</td>
+		<td class="powerreq_col">9</td>
+	</tr>
+</tbody></table>
+<table id="i4m_indestructibility" onclick="toggle('i4m_indestructibility',0, true, 'i4m_hardenedskin',null)">
+	<tbody><tr>
+		<td class="name_col">Indestructibility</td>
+		<td class="desc_col">You are nigh indestructible. Enemies strike you 
+with their blades only to find them chipped, and arrows shatter against 
+your bare skin. Req. Hardened Skin.</td>
+		<td class="powerval_col">-4</td>
+		<td class="skillval_col">-1</td>
+		<td class="powerreq_col">19</td>
+	</tr>
+</tbody></table>
+<hr class="no_hr">
+<br>
+</div>
+
+<hr>
+<h1 onclick="slidePanel('abjuration')">Abjuration Abilities</h1>
+<div id="abjuration" class="infocus">
+<p class="narration">
+Does your character have the ability to counter spells and dispel magic?<br>
+</p>
+<table id="i4n_dispelling1" onclick="toggle('i4n_dispelling1',0, true, null,null, 'i4n_dispelling2')">
+	<tbody><tr>
+		<td class="name_col">Dispelling I</td>
+		<td class="desc_col">You can dispel any magic of your choice at a 
+touch, and can dispel ongoing magical effects on you (but not their 
+indirect effects) at any time. </td>
+		<td class="skillval_col">-2</td>
+		<td class="powerreq_col">5</td>
+	</tr>
+</tbody></table>
+<table id="i4n_dispelling2" onclick="toggle('i4n_dispelling2',0, true, 'i4n_dispelling1',null, 'i4n_dispelling3')">
+	<tbody><tr>
+		<td class="name_col">Dispelling II</td>
+		<td class="desc_col">You can dispel any magic of your choice from 
+anywhere close to you, and dispel an enemy's enchantments and counter 
+their spells by hitting them with dispelling bolts. Req. Dispelling I.</td>
+		<td class="skillval_col">-2</td>
+		<td class="powerreq_col">9</td>
+	</tr>
+</tbody></table>
+<table id="i4n_dispelling3" onclick="toggle('i4n_dispelling3',0, true, 'i4n_dispelling2',null)">
+	<tbody><tr>
+		<td class="name_col">Dispelling III</td>
+		<td class="desc_col">You can conjure an antimagic field at a location 
+of your choice, rendering all hostile spells ineffective in that area 
+and preventing those there from casting their spells. Req. Dispelling II.</td>
+		<td class="skillval_col">-2</td>
+		<td class="powerreq_col">12</td>
+	</tr>
+</tbody></table>
+<br>
+<table id="i4n_spellwarding1" onclick="toggle('i4n_spellwarding1',0, true, null,null, 'i4n_spellwarding2')">
+	<tbody><tr>
+		<td class="name_col">Spell Warding I</td>
+		<td class="desc_col">You can put forth your hand to harmlessly negate any magical energy coming from that direction.</td>
+		<td class="skillval_col">-1</td>
+		<td class="powerreq_col">7</td>
+	</tr>
+</tbody></table>
+<table id="i4n_spellwarding2" onclick="toggle('i4n_spellwarding2',0, true, 'i4n_spellwarding1',null)">
+	<tbody><tr>
+		<td class="name_col">Spell Warding II</td>
+		<td class="desc_col">You can conjure a sphere of energies, centered on your location, that negates all incoming hostile spells. Req. Spell Warding I.</td>
+		<td class="skillval_col">-1</td>
+		<td class="powerreq_col">18</td>
+	</tr>
+</tbody></table>
+<hr class="no_hr">
+<br>
+</div>
+
+<hr>
+<h1 onclick="slidePanel('commanding')">Commanding Abilities</h1>
+<div id="commanding" class="infocus">
+<p class="narration">
+Do you have the ability to make others obey his every command?<br>
+</p>
+<table id="i4o_suggestion" onclick="toggle('i4o_suggestion',0, true, null,null, 'i4o_commandhuman')">
+	<tbody><tr>
+		<td class="name_col">Suggestion</td>
+		<td class="desc_col">You can give suggestions which will seem very 
+convincing to human listeners for a short while, but which can be 
+resisted depending on the outlandishness and targets' willpower. </td>
+		<td class="powerval_col">-3</td>
+		<td class="skillval_col">-9</td>
+		<td class="powerreq_col">12</td>
+	</tr>
+</tbody></table>
+<table id="i4o_commandhuman" onclick="toggle('i4o_commandhuman',0, true, 'i4o_suggestion',null, 'i4o_longtermcommand')">
+	<tbody><tr>
+		<td class="name_col">Command Human</td>
+		<td class="desc_col">You can give commands that will be obeyed utterly
+ - for up to a few minutes, depending on the targets' willpower. Can 
+only command a few people at a time. Req. Suggestion.</td>
+		<td class="powerval_col">-6</td>
+		<td class="skillval_col">-1</td>
+		<td class="powerreq_col">32</td>
+	</tr>
+</tbody></table>
+<table id="i4o_commandanimal" onclick="toggle('i4o_commandanimal',0, true, null,null, 'i4o_commandswarm')">
+	<tbody><tr>
+		<td class="name_col">Command Animal</td>
+		<td class="desc_col">Your commands can be given to animals as well, 
+though the limit cap applies and is the total across all your minions. 
+They're not made intelligent.  </td>
+		<td class="powerval_col">-3</td>
+		<td class="skillval_col">-3</td>
+		<td class="powerreq_col">6</td>
+	</tr>
+</tbody></table>
+<table id="i4o_commandswarm" onclick="toggle('i4o_commandswarm',0, true, 'i4o_commandanimal',null)">
+	<tbody><tr>
+		<td class="name_col">Command Swarm</td>
+		<td class="desc_col">Each active command you give counts only partialy
+ toward your minion cap, allowing you to command entire swarms with 
+ease. Req. Command Animal.</td>
+		<td class="powerval_col">-5</td>
+		<td class="skillval_col">-1</td>
+		<td class="powerreq_col">8</td>
+	</tr>
+</tbody></table>
+<table id="i4o_commandplant" onclick="toggle('i4o_commandplant',0, true, null,null)">
+	<tbody><tr>
+		<td class="name_col">Command Plant</td>
+		<td class="desc_col">Your commands can be given to plants as well, 
+though the limit cap applies and is the total across all your minions. 
+They can move, but are not made intelligent. </td>
+		<td class="powerval_col">-1</td>
+		<td class="skillval_col">-2</td>
+		<td class="powerreq_col">4</td>
+	</tr>
+</tbody></table>
+<table id="i4o_inanimatecommand" onclick="toggle('i4o_inanimatecommand',0, true, null,null)">
+	<tbody><tr>
+		<td class="name_col">Inanimate Command</td>
+		<td class="desc_col">Your commands control movement of nonliving 
+objects as well, though the limit cap applies and is used based on the 
+mass and number of the objects controlled.</td>
+		<td class="powerval_col">-6</td>
+		<td class="skillval_col">-6</td>
+		<td class="powerreq_col">18</td>
+	</tr>
+</tbody></table>
+<table id="i4o_longtermcommand" onclick="toggle('i4o_longtermcommand',0, true, 'i4o_commandhuman',null, 'i4o_unlimitedcommand')">
+	<tbody><tr>
+		<td class="name_col">Long Term Command</td>
+		<td class="desc_col">As Command, except the command has no duration 
+limit, allowing you to create long-term minions. Can only command a few 
+people at a time. Req. Command Human.</td>
+		<td class="powerval_col">-1</td>
+		<td class="skillval_col">-1</td>
+		<td class="powerreq_col">40</td>
+	</tr>
+</tbody></table>
+<table id="i4o_unlimitedcommand" onclick="toggle('i4o_unlimitedcommand',0, true, 'i4o_longtermcommand',null)">
+	<tbody><tr>
+		<td class="name_col">Unlimited Command</td>
+		<td class="desc_col">As Long Term Command, except there's no limit on how many people you can give commands to at a time. Req. Long Term Command. </td>
+		<td class="powerval_col">-10</td>
+		<td class="skillval_col">-1</td>
+		<td class="powerreq_col">50</td>
+	</tr>
+</tbody></table>
+<hr class="no_hr">
+<br>
+</div>
+
+<hr>
+<h1 onclick="slidePanel('eldritch')">Eldritch Abilities</h1>
+<div id="eldritch" class="infocus">
+<p class="narration">
+Does your character have eldritch abilities?<br>
+</p>
+<table id="i4p_luckalteration" onclick="toggle('i4p_luckalteration',0, true, null,null)">
+	<tbody><tr>
+		<td class="name_col">Luck Alteration</td>
+		<td class="desc_col">You can tilt luck in favor of you and your 
+companions and ruin the odds for anyone you despise, and they may never 
+even know it was you, making for an easy way to cheat.</td>
+		<td class="skillval_col">-2</td>
+		<td class="powerreq_col">7</td>
+	</tr>
+</tbody></table>
+<br>
+<table id="i4p_youthtransfer" onclick="toggle('i4p_youthtransfer',0, true, null,null, 'i5a_rejuvenation')">
+	<tbody><tr>
+		<td class="name_col">Youth Transfer</td>
+		<td class="desc_col">You can make yourself or anyone of your choice 
+younger, but only at the cost of siphoning youth from the unwilling, 
+leaving your victims old and haggard.</td>
+		<td class="skillval_col">-3</td>
+		<td class="powerreq_col">16</td>
+	</tr>
+</tbody></table>
+<br>
+<table id="i4p_doommarking" onclick="toggle('i4p_doommarking',0, true, null,null)">
+	<tbody><tr>
+		<td class="name_col">Doom Marking</td>
+		<td class="desc_col">You can curse your victims with an indelible mark
+ of doom. Vile monsters will be attracted those so marked and seek to 
+kill them. They shall never know safety again.</td>
+		<td class="skillval_col">-1</td>
+		<td class="powerreq_col">18</td>
+	</tr>
+</tbody></table>
+<table id="i4p_unhealing" onclick="toggle('i4p_unhealing',0, true, null,null)">
+	<tbody><tr>
+		<td class="name_col">Unhealing</td>
+		<td class="desc_col">You can curse your victims so that they can never
+ regenerate or be healed of any wounds they incur, from the moment they 
+are cursed until they die, until their body falls apart.</td>
+		<td class="skillval_col">-1</td>
+		<td class="powerreq_col">20</td>
+	</tr>
+</tbody></table>
+<table id="i4p_painwracking" onclick="toggle('i4p_painwracking',0, true, null,null)">
+	<tbody><tr>
+		<td class="name_col">Pain Wracking</td>
+		<td class="desc_col">You can curse your victims to either suffer 
+endless pain, or dream nightmares, for the rest of their days. The 
+torture and torment will eventually drive even the toughest men insane.</td>
+		<td class="skillval_col">-1</td>
+		<td class="powerreq_col">23</td>
+	</tr>
+</tbody></table>
+<table id="i4p_bloodparasitism" onclick="toggle('i4p_bloodparasitism',0, true, null,null)">
+	<tbody><tr>
+		<td class="name_col">Blood Parasitism</td>
+		<td class="desc_col">You can remote implant a blood parasite in any 
+victims of your choice. The blood parasite will, over the course of 
+three weeks, grow and gestate until it bursts out from its host.</td>
+		<td class="skillval_col">-1</td>
+		<td class="powerreq_col">25</td>
+	</tr>
+</tbody></table>
+<table id="i4p_magestormenting" onclick="toggle('i4p_magestormenting',0, true, null,null)">
+	<tbody><tr>
+		<td class="name_col">Mage Tormenting</td>
+		<td class="desc_col">You curse the innate magic of your victims so 
+that any time they attempt to work magic, they suffer unavoidable and 
+excruciating injury and pain.</td>
+		<td class="skillval_col">-1</td>
+		<td class="powerreq_col">27</td>
+	</tr>
+</tbody></table>
+<table id="i4p_arcanemarking" onclick="toggle('i4p_arcanemarking',0, true, null,null)">
+	<tbody><tr>
+		<td class="name_col">Arcane Marking</td>
+		<td class="desc_col">You can channel magic through your blood, 
+wherever it may be. Get even a drop of it on a target, and you can 
+affect your magic through them, anytime, regardless of distance.</td>
+		<td class="skillval_col">-2</td>
+		<td class="powerreq_col">22</td>
+	</tr>
+</tbody></table>
+<table id="i4p_painretribution" onclick="toggle('i4p_painretribution',0, true, null,null)">
+	<tbody><tr>
+		<td class="name_col">Pain Retribution</td>
+		<td class="desc_col">Your mind and body is protected by an eldritch 
+ward that returns threefold the injuries you receive back at the one 
+responsible, no matter how far away they may be.</td>
+		<td class="skillval_col">-1</td>
+		<td class="powerreq_col">29</td>
+	</tr>
+</tbody></table>
+<table id="i4p_astralrecall" onclick="toggle('i4p_astralrecall',0, true, null,null)">
+	<tbody><tr>
+		<td class="name_col">Astral Recall</td>
+		<td class="desc_col">You can sacrifice a shard of magicite to lash a 
+bond between you and a target of your choice, wherever they are. They 
+are then pulled to your location through the Void.</td>
+		<td class="skillval_col">-2</td>
+		<td class="powerreq_col">32</td>
+	</tr>
+</tbody></table>
+<table id="i4p_astralassassination" onclick="toggle('i4p_astralassassination',0, true, null,null, 'i5a_astralthreats')">
+	<tbody><tr>
+		<td class="name_col">Astral Assassination</td>
+		<td class="desc_col">You can ritually slay a slave and use its blood 
+to draw a blood sigil with which you can kill anyone in the world, so 
+long as you know who they are, and it shall not be prevented.</td>
+		<td class="skillval_col">-2</td>
+		<td class="powerreq_col">42</td>
+	</tr>
+</tbody></table>
+<table id="i4p_paindelegation" onclick="toggle('i4p_paindelegation',0, true, null,null)">
+	<tbody><tr>
+		<td class="name_col">Pain Delegation</td>
+		<td class="desc_col">You can bind slaves to yourself with unbreakable 
+blood bonds. Thereafter, any harm that would have come to you harms the 
+blood slaves instead.</td>
+		<td class="skillval_col">-1</td>
+		<td class="powerreq_col">46</td>
+	</tr>
+</tbody></table>
+<hr class="no_hr">
+<br>
+</div>
+
+<hr>
+<h1 onclick="slidePanel('metamagic')">Metamagic Abilities</h1>
+<div id="metamagic" class="infocus">
+<p class="narration">
+Does your character have the ability to mimic, create, and share spells and abilities?<br>
+</p>
+<table id="i4q_abilitylearning1" onclick="toggle('i4q_abilitylearning1',0, true, null,null, 'i4q_abilitylearning2')">
+	<tbody><tr>
+		<td class="name_col">Spell Learning I</td>
+		<td class="desc_col">You can learn rapidly from watching enemies use 
+spells - to the point that you can replicate them after watching just a 
+few times. You also forget them after a short while.</td>
+		<td class="skillval_col">-4</td>
+		<td class="powerreq_col">25</td>
+	</tr>
+</tbody></table>
+<table id="i4q_abilitylearning2" onclick="toggle('i4q_abilitylearning2',0, true, 'i4q_abilitylearning1',null)">
+	<tbody><tr>
+		<td class="name_col">Spell Learning II</td>
+		<td class="desc_col">You retain lasting knowledge of how to use the 
+spells you've learned via Ability Learning, allowing their use against 
+other opponents later. Req. Spell Learning I.</td>
+		<td class="skillval_col">-5</td>
+		<td class="powerreq_col">60</td>
+	</tr>
+</tbody></table>
+<table id="i4q_abilitycreation" onclick="toggle('i4q_abilitycreation',0, true, null,null)">
+	<tbody><tr>
+		<td class="name_col">Spell Creation</td>
+		<td class="desc_col">You can, with months of dedicated practice, 
+create new spells for yourself, however these cannot be passive powers, 
+and as usual, only one or two spells can be used at a time.</td>
+		<td class="skillval_col">-6</td>
+		<td class="powerreq_col">55</td>
+	</tr>
+</tbody></table>
+<br>
+<table id="i4q_abilitysharing1" onclick="toggle('i4q_abilitysharing1',0, true, null,null, 'i4q_abilitysharing2')">
+	<tbody><tr>
+		<td class="name_col">Ability Sharing I</td>
+		<td class="desc_col">You can share your power with another individual,
+ during which you yourself won't be able to use that power. You can 
+cancel at any time to regain your power. Can't share this.</td>
+		<td class="skillval_col">-2</td>
+		<td class="powerreq_col">10</td>
+	</tr>
+</tbody></table>
+<table id="i4q_abilitysharing2" onclick="toggle('i4q_abilitysharing2',0, true, 'i4q_abilitysharing1',null)">
+	<tbody><tr>
+		<td class="name_col">Ability Sharing II</td>
+		<td class="desc_col">You can share your power with up to several 
+nearby individuals simultaneously, even as you yourself keep this power.
+ Can't share this. Req. Ability Sharing I.</td>
+		<td class="skillval_col">-3</td>
+		<td class="powerreq_col">20</td>
+	</tr>
+</tbody></table>
+<br>
+<table id="i4q_communion" onclick="toggle('i4q_communion',0, true, null,null, 'i4q_weathermanipulation')">
+	<tbody><tr>
+		<td class="name_col">Communion</td>
+		<td class="desc_col">You can join in mystical communion with your 
+companions, synergizing your magical potential to create spells of 
+unparalleled power.</td>
+		<td class="skillval_col">-2</td>
+		<td class="powerreq_col">5</td>
+	</tr>
+</tbody></table>
+<table id="i4q_weathermanipulation" onclick="toggle('i4q_weathermanipulation',0, true, 'i4q_communion',null)">
+	<tbody><tr>
+		<td class="name_col">Weather Manipulation</td>
+		<td class="desc_col">You can, with great effort and in communion with 
+many mages of great power, evoke thunderstorm and sandstorm, snowstorm 
+and firestorm. Req. Communion.</td>
+		<td class="skillval_col">-3</td>
+		<td class="powerreq_col">35</td>
+	</tr>
+</tbody></table>
+<br>
+<table id="i4q_manadraining" onclick="toggle('i4q_manadraining',0, true, null,null)">
+	<tbody><tr>
+		<td class="name_col">Mana Draining</td>
+		<td class="desc_col">You can suck up the mana of anyone around you, 
+against their will, to fuel your spells and potentially supercharge 
+them. Those affected will have difficulty casting spells.</td>
+		<td class="skillval_col">-2</td>
+		<td class="powerreq_col">23</td>
+	</tr>
+</tbody></table>
+<hr class="no_hr">
+<br>
+</div>
+
+<hr>
+<h1 onclick="slidePanel('opportunities')">Opportunities</h1>
+<div id="opportunities" class="infocus">
+<p class="narrationleft">
+Of course, no one is perfectly satisfied with their lot in life. 
+Fortunately for you, you have several opportunities to improve yours...<br>
+</p>
+<p class="narration">
+Which opportunities will you seize?<br>
+</p>
+<table id="i5a_bloodrite" onclick="toggle('i5a_bloodrite',0, true)">
+	<tbody><tr>
+		<td class="name_col">Blood Sacrifice</td>
+		<td class="desc_col">You abducted a virgin maiden and then slew her in
+ a forbidden ritual. Your ruby soaked up her blood and life force, 
+becoming a shard of vitalite.</td>
+		<td class="lifeval_col">1</td>
+	</tr>
+</tbody></table>
+<table id="i5a_amulettheft" onclick="toggle('i5a_amulettheft',0, true, 'i3a_stealth',null)">
+	<tbody><tr>
+		<td class="name_col">Amulet Theft</td>
+		<td class="desc_col">You unclasped the gemstone amulet right off that 
+countess as she toured the bazaar. She found what she wanted to buy but 
+didn't find what she wasn't selling. Req. Stealth.</td>
+		<td class="skillval_col">1</td>
+		<td class="goldval_col">5</td>
+	</tr>
+</tbody></table>
+<table id="i5a_celestialempowerment" onclick="toggle('i5a_celestialempowerment',0, true)">
+	<tbody><tr>
+		<td class="name_col">Luminary Empowerment</td>
+		<td class="desc_col">On the day the sun, the moon and the stars 
+aligned and the luminaria came out to dance, you danced with them and 
+accepted several of them into yourself.</td>
+		<td class="powerval_col">2</td>
+	</tr>
+</tbody></table>
+<table id="i5a_rejuvenation" onclick="toggle('i5a_rejuvenation',0, true, 'i4p_youthtransfer',null)">
+	<tbody><tr>
+		<td class="name_col">Rejuvenation Ritual</td>
+		<td class="desc_col">You've shaved years off your age at the expense 
+of siphoning youth from several young maidens. By the time you were 
+finished with them, they'd become old crones. Req. Youth Transfer.</td>
+		<td class="lifeval_col">3</td>
+	</tr>
+</tbody></table>
+<table id="i5a_soulentrapment" onclick="toggle('i5a_soulentrapment',0, true, 'i4f_soultrapping',null)">
+	<tbody><tr>
+		<td class="name_col">Soul Entrapment</td>
+		<td class="desc_col">You saw to it that many never-do-gooders were 
+slaughtered, then trapped their souls in spiritite and used their souls 
+to enhance your own. Req. Soul Trapping.</td>
+		<td class="powerval_col">4</td>
+	</tr>
+</tbody></table>
+<table id="i5a_stolentreasure" onclick="toggle('i5a_stolentreasure',0, true, 'i4e_mindreading',null)">
+	<tbody><tr>
+		<td class="name_col">Stolen Treasure</td>
+		<td class="desc_col">You read the minds of people off the street until
+ you chanced upon someone thinking about their hidden stash of gems. It 
+remained hidden no longer. Req. Mind Reading.</td>
+		<td class="lifeval_col">2</td>
+		<td class="skillval_col">1</td>
+		<td class="powerval_col">1</td>
+	</tr>
+</tbody></table>
+<table id="i5a_grandheist" onclick="toggle('i5a_grandheist',0, true, 'i3b_deceit',null)">
+	<tbody><tr>
+		<td class="name_col">Grand Heist</td>
+		<td class="desc_col">You disguised yourself as a guard, broke into a 
+well-guarded vault and made off with all the gold, only narrowly evading
+ capture. Req. Deceit.</td>
+		<td class="goldval_col">38</td>
+	</tr>
+</tbody></table>
+<table id="i5a_beddinggifts" onclick="toggle('i5a_beddinggifts',0, true, 'i3b_seduction',null)">
+	<tbody><tr>
+		<td class="name_col">Bedding Gifts</td>
+		<td class="desc_col">You seduced your way into a wealthy nobleman's 
+bed, you naughty you. You left that same bed with quite the load of 
+gifts. Req. Seduction.</td>
+		<td class="lifeval_col">3</td>
+		<td class="goldval_col">7</td>
+	</tr>
+</tbody></table>
+<table id="i5a_gangblackmail" onclick="toggle('i5a_gangblackmail',0, true, 'i3b_inquisition',null)">
+	<tbody><tr>
+		<td class="name_col">Gang Blackmail</td>
+		<td class="desc_col">You found the hideout of a local gang that had 
+been trading in valuables. You got a bit of it in exchange for keeping 
+something more valuable: Their secret. Req. Inquisition.</td>
+		<td class="skillval_col">2</td>
+		<td class="goldval_col">16</td>
+	</tr>
+</tbody></table>
+<table id="i5a_pactwithdarkone" onclick="toggle('i5a_pactwithdarkone',0, true)">
+	<tbody><tr>
+		<td class="name_col">Pact with the Dark One</td>
+		<td class="desc_col">You made a pact with the Dark One that you would 
+engage in unspeakable atrocities in exchange for power via his dark 
+mark. Now you dare not disobey lest the mark kills you.</td>
+		<td class="powerval_col">6</td>
+	</tr>
+</tbody></table>
+<table id="i5a_sigilinvention" onclick="toggle('i5a_sigilinvention',0, true, 'i3b_inspiration','i1d6_universitymaster')">
+	<tbody><tr>
+		<td class="name_col">Sigil Invention</td>
+		<td class="desc_col">You invented a new sigil for spelltracing, and a 
+useful one at that. You'll be reaping the rewards from the University 
+for a long time to come. Req. Inspiration, Master.</td>
+		<td class="goldval_col">32</td>
+	</tr>
+</tbody></table>
+<table id="i5a_discoveredmagicite" onclick="toggle('i5a_discoveredmagicite',0, true, 'i1d2_guildjourneyman',null)">
+	<tbody><tr>
+		<td class="name_col">Magicite Discovery</td>
+		<td class="desc_col">While expeditioning within the ruins of a 
+long-collapsed civilization, you found a rare cache of magicite, which 
+you could use to make yourself some enchantments. Req. Journeyman.</td>
+		<td class="skillval_col">8</td>
+	</tr>
+</tbody></table>
+<table id="i5a_nobleimpersonation" onclick="toggle('i5a_nobleimpersonation',0, true, 'i4g_animatedillusion',null)">
+	<tbody><tr>
+		<td class="name_col">Noble Impersonation</td>
+		<td class="desc_col">Your glamers impersonated a nobleman so well that
+ you walked right into his treasure room and walked right out with the 
+family fortune. Req. Animated Illusion.</td>
+		<td class="lifeval_col">1</td>
+		<td class="skillval_col">3</td>
+		<td class="goldval_col">50</td>
+	</tr>
+</tbody></table>
+<table id="i5a_hellsending" onclick="toggle('i5a_hellsending',0, true, 'i4l_damnation',null)">
+	<tbody><tr>
+		<td class="name_col">Hell Sending</td>
+		<td class="desc_col">You have given your enemies what they deserved - 
+Hell. Now your enemies are at the demons' mercy, and the demons have 
+sent well-deserved gifts your way. Req. Damnation.</td>
+		<td class="skillval_col">6</td>
+		<td class="powerval_col">6</td>
+	</tr>
+</tbody></table>
+<table id="i5a_royalenslavement" onclick="toggle('i5a_royalenslavement',0, true, 'i4d_bodycontrol',null)">
+	<tbody><tr>
+		<td class="name_col">Royal Enslavement</td>
+		<td class="desc_col">You've put a royal princess' body under your 
+spell. She's yours to do with as you wish, or if you give her back you 
+can get all the wealth you wish. Req. Body Control.</td>
+		<td class="goldval_col">100</td>
+	</tr>
+</tbody></table>
+<table id="i5a_astralthreats" onclick="toggle('i5a_astralthreats',0, true, 'i4p_astralassassination',null)">
+	<tbody><tr>
+		<td class="name_col">Astral Threats</td>
+		<td class="desc_col">You have issued death threats to all the nobles 
+and demanded money from each. After a demonstration of your power, none 
+dare refuse. Req. Astral Assassination.</td>
+		<td class="lifeval_col">6</td>
+		<td class="skillval_col">2</td>
+		<td class="powerval_col">4</td>
+		<td class="goldval_col">125</td>
+	</tr>
+</tbody></table>
+<table id="i5a_alchemy" onclick="toggle('i5a_alchemy',0, true, 'i4j_transmutation',null)">
+	<tbody><tr>
+		<td class="name_col">Alchemy</td>
+		<td class="desc_col">You discovered a way to transmute silver into 
+gold. Rather than tell the authorities, you start making massive 
+quantities of gold for yourself. Req. Transmutation.</td>
+		<td class="goldval_col">225</td>
+	</tr>
+</tbody></table>
+<br>
+<table id="i5a_giftmagicaway" onclick="toggle('i5a_giftmagicaway',0, true)">
+	<tbody><tr>
+		<td class="name_col">Gifted Magic Away</td>
+		<td class="desc_col">You gave away a portion of your magical power in a
+ selfless sacrifice, either to help someone in need or as a contribution
+ to the greater good.</td>
+		<td class="powerval_col">-2</td>
+	</tr>
+</tbody></table>
+<hr class="no_hr">
+<br>
+</div>
+
+<!--
+<hr>
+<h1 onclick="slidePanel('afflictions')">Afflictions</h1>
+<div id="afflictions" class="infocus">
+<p class="narration">
+Is your character sound of mind and body, or does he/she suffer from permanent ailments and afflictions? <br>
+</p>
+<table id="lostaneye">
+	<tr>
+		<td class="name_col">Lost an Eye</td>
+		<td class="desc_col">One of your eyes is either damaged beyond all repair or has been gouged out, leaving you with greatly hampered distance perception. You will never be able to aim well.</td>
+		<td class="skillval_col">6</td>
+	</tr>
+</table>
+<table id="lostbotheyes">
+	<tr>
+		<td class="name_col">Lost Both Eyes</td>
+		<td class="desc_col">You are missing both eyes and are blind, leaving you to use your hands, a staff or a companion to blunder your way around in endless darkness.</td>
+		<td class="skillval_col">36</td>
+	</tr>
+</table>
+<table id="lostahand">
+	<tr>
+		<td class="name_col">Lost a Hand</td>
+		<td class="desc_col">One of your arms or hands has been severed and can never be restored. You can never hold two items at once, or cast spells requiring both hands (tier III spells).</td>
+		<td class="skillval_col">10</td>
+	</tr>
+</table>
+<table id="lostbothhands">
+	<tr>
+		<td class="name_col">Lost Both Hands</td>
+		<td class="desc_col">You are missing both of your hands or arms. You cannot hold anything (ie. weapons), and cannot cast spells requiring the use of a hand. Req. Lost a Hand.</td>
+		<td class="skillval_col">34</td>
+	</tr>
+</table>
+<table id="crippled">
+	<tr>
+		<td class="name_col">Crippled</td>
+		<td class="desc_col">Your legs are crippled beyond all hope of healing, leaving you to limp along, and barely able to fight in melee. You will remain a cripple for the rest of your life.</td>
+		<td class="skillval_col">8</td>
+	</tr>
+</table>
+<table id="lostaleg">
+	<tr>
+		<td class="name_col">Lost a Leg</td>
+		<td class="desc_col">One of your legs has been severed and can never be restored. Without the aid of crutches, you can only crawl or hop. Req. Crippled.</td>
+		<td class="skillval_col">18</td>
+	</tr>
+</table>
+<table id="lostbothlegs">
+	<tr>
+		<td class="name_col">Lost Both Legs</td>
+		<td class="desc_col">Both of your legs have been severed or rendered permanently paralyzed. You cannot walk. Not even crutches will help. Req. Lost a Leg.</td>
+		<td class="skillval_col">24</td>
+	</tr>
+</table>
+<table id="badluck">
+	<tr>
+		<td class="name_col">Bad Luck</td>
+		<td class="desc_col">You have been cursed with bad luck. Attempts to dodge rarely succeed, and your own strikes often miss their target, and your plans fail inexplicably.</td>
+		<td class="skillval_col">2</td>
+	</tr>
+</table>
+<table id="disfigured">
+	<tr>
+		<td class="name_col">Disfigured</td>
+		<td class="desc_col">Your face has been horribly disfigured. Everywhere you go, you shroud your face or else bear peoples' whispers and looks of apprehension.</td>
+		<td class="skillval_col">2</td>
+	</tr>
+</table>
+<table id="deformed">
+	<tr>
+		<td class="name_col">Deformed</td>
+		<td class="desc_col">You have been cursed with having a horrible form. You move in shambles and people back away or condemn you in disgust wherever you go.</td>
+		<td class="skillval_col">6</td>
+	</tr>
+</table>
+<table id="chestwound">
+	<tr>
+		<td class="name_col">Chest Wound</td>
+		<td class="desc_col">You have suffered a wound in the chest that leaves you hard of breath and unable to exert to the full extent of your former ability.</td>
+		<td class="skillval_col">3</td>
+	</tr>
+</table>
+<table id="deaf">
+	<tr>
+		<td class="name_col">Deaf</td>
+		<td class="desc_col">You are either missing both your ears or were cursed never to hear again. This leaves you less aware of your surroundings.</td>
+		<td class="skillval_col">4</td>
+	</tr>
+</table>
+<table id="hallucination">
+	<tr>
+		<td class="name_col">Hallucination</td>
+		<td class="desc_col">You frequently cannot distinguish between what is real and what is not, and may see and hear phantoms that aren't really there.</td>
+		<td class="skillval_col">6</td>
+	</tr>
+</table>
+<table id="insanity">
+	<tr>
+		<td class="name_col">Insanity</td>
+		<td class="desc_col">You frequently go insane, during which you lose control of yourself and lash out at anyone or anything nearby, even to the point of causing harm to yourself.</td>
+		<td class="skillval_col">13</td>
+	</tr>
+</table>
+<table id="vulnerability">
+	<tr>
+		<td class="name_col">Vulnerability</td>
+		<td class="desc_col">You have been cursed with skin like rice paper. Even the most glancing of blows leave massive gashes, and more severe hits can leave you crippled.</td>
+		<td class="skillval_col">8</td>
+	</tr>
+</table>
+<table id="quivering">
+	<tr>
+		<td class="name_col">Quivering</td>
+		<td class="desc_col">You are unable to move with grace; your hands and feet quiver when not at rest. You are unable to properly perform spells requiring gestures or movement; and fight poorly.</td>
+		<td class="skillval_col">10</td>
+	</tr>
+</table>
+<table id="weakened">
+	<tr>
+		<td class="name_col">Weakened</td>
+		<td class="desc_col">You were either born extremely weak or cursed with a spell that drains away all strength. You are barely able to fight melee or draw a bow. Even running and jumping is beyond you.</td>
+		<td class="skillval_col">12</td>
+	</tr>
+</table>
+<table id="disorientated">
+	<tr>
+		<td class="name_col">Disorientated</td>
+		<td class="desc_col">You were cursed with a poor sense of aim and balance. You cannot hope to shoot with any accuracy, nor will you show prowess in melee.</td>
+		<td class="skillval_col">4</td>
+	</tr>
+</table>
+<table id="forgetful">
+	<tr>
+		<td class="name_col">Forgetful</td>
+		<td class="desc_col">You have difficulty remembering things. You are constantly chided for forgetting things, even important ones, and have to work extra hard to learn spells.</td>
+		<td class="skillval_col">5</td>
+	</tr>
+</table>
+<table id="confusion">
+	<tr>
+		<td class="name_col">Confusion</td>
+		<td class="desc_col">You were cursed with an inability to think straight. And so day in and day out you make a fool out of yourself, often bringing harm on yourself as well.</td>
+		<td class="skillval_col">13</td>
+	</tr>
+</table>
+<table id="brokenmind">
+	<tr>
+		<td class="name_col">Broken Mind</td>
+		<td class="desc_col">Your mind has been shattered by a mental attack. You are not quite yourself any more, and lack the spirit you used to have. Thinking is painful, and you've lost all emotion now.</td>
+		<td class="skillval_col">5</td>
+	</tr>
+</table>
+<table id="battlefright">
+	<tr>
+		<td class="name_col">Battle Fright</td>
+		<td class="desc_col">A horrific experience has left you traumatized. You are afraid of even the slightest unexpected sound, and can't help but flee at the first sign of battle.</td>
+		<td class="skillval_col">18</td>
+	</tr>
+</table>
+<table id="mute">
+	<tr>
+		<td class="name_col">Mute</td>
+		<td class="desc_col">You were cursed to be silent for the rest of your days, or had your tongue ripped out. You cannot utter any spells with a vocal component.</td>
+		<td class="skillval_col">16</td>
+	</tr>
+</table>
+<table id="spelldraining">
+	<tr>
+		<td class="name_col">Spelldraining</td>
+		<td class="desc_col">With each spell you cast, you become more fatigued than before, and the fatigue never goes away. Your spells have been getting weaker with each passing year.</td>
+		<td class="skillval_col">24</td>
+	</tr>
+</table>
+<table id="doommarked">
+	<tr>
+		<td class="name_col">Doom Marked</td>
+		<td class="desc_col">You have been cursed with an indelible mark of doom. Vile monsters are attracted to you and seek to kill you, even in broad daylight in places that should by all rights be safe.</td>
+		<td class="skillval_col">30</td>
+	</tr>
+</table>
+<table id="everlastingwounds">
+	<tr>
+		<td class="name_col">Everlasting Wounds</td>
+		<td class="desc_col">None of your wounds can ever heal or be healed. Mercifully, the pain goes away as normal, but the more you go into battle, the more your body falls apart.</td>
+		<td class="skillval_col">36</td>
+	</tr>
+</table>
+<table id="terminalillness">
+	<tr>
+		<td class="name_col">Terminal Illness</td>
+		<td class="desc_col">You have either caught or developed a terminal and incurable illness which you know will kill you in just a few more years.</td>
+		<td class="skillval_col">45</td>
+	</tr>
+</table>
+<table id="nightmares">
+	<tr>
+		<td class="name_col">Nightmares</td>
+		<td class="desc_col">You are plagued by horrifying dreams each and every night, and as such your sleep gives you no respite. Each morning you wake screaming and more exhausted than the last.</td>
+		<td class="skillval_col">20</td>
+	</tr>
+</table>
+<table id="endlesspain">
+	<tr>
+		<td class="name_col">Endless Pain</td>
+		<td class="desc_col">You suffer everlasting pain from a terrible curse that had been laid upon you. Your sanity has lasted thus far, but you don't know how much longer you can take it.</td>
+		<td class="skillval_col">60</td>
+	</tr>
+</table>
+<hr class="no_hr">
+<br>
+</div>
+-->
+
+</div>
+
+<hr>
+<div id="outro" class="infocus">
+<p class="narration">
+And so you chose your destiny.
+</p>
+<!-- <p class="narration"><button id="btnSummary" type="button" onclick="gen_summary()">Generate Summary</button></p> -->
+<div class="summarybutton_frame"><div class="summarybutton" onclick="gen_summary()"> <!-- gen_summary() -->
+<p class="noselect">Generate Character Description</p>
+</div></div>
+<p id="p_summary"><b>Background</b><br><br><br>(Options selected.)</p>
+</div>
+
+<br>
+<br>
+<p id="footer">
+Release v1.22.17 - © 2016 by Yunzhong Hou (Luminarium) - based on release v1.22.16 with added fixes 26/2/18 by Metalax
+</p>
+</body></html>
